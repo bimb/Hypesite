@@ -129,7 +129,7 @@ h3.textoTitulo:after{border:none;}
 /**  Sections */
 
 section{box-sizing: border-box; padding:0px; display: table; width: 100%; position: relative;}
-section h1{}
+section h1{text-transform: uppercase;}
 section p{margin-top: 0;}
 section.post {float: left; padding: 0;}
 section.section-home{min-height: 60vh; border-bottom: 2px solid #000;}
@@ -229,6 +229,13 @@ div#inicioMobile{display: none; margin-top: 60px;}
 }
 
 #post-acerca-de .bottomImage{}
+
+/* ENTRENAMIENTO */
+
+#home-entrenamiento {
+    background-color: #000;
+    color: #fff;
+}
 
 /* HORARIOS */
 

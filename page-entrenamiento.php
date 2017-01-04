@@ -16,17 +16,12 @@ if($ajaxload == false)
   ?>
 
 	<article class="postWrapper" id="entrenamiento">
-            
-            <div class="tumbnail">
-                <?php 
-                    if ( has_post_thumbnail() ) 
-                        the_post_thumbnail(); 
-                ?>
-            </div>
+  <img class="colorShapesEntrenamiento" src="<?php bloginfo('template_url'); ?>/images/colorShapesEntrenamiento.png" />
+  <section class="post">
+  <h1 class="postTitle"><?php the_title(); ?></h1>
+  <?php the_content(); ?>
+  </section>
 
-            <section class="post"><?php the_content(__('(more...)')); ?></section>
-            <div class="centerImage"></div>
-            <div class="rightImage"></div>
                 
     </article>
 
