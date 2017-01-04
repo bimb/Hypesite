@@ -24,8 +24,10 @@ if($ajaxload == false)
                 ?>
                 <div class="bottomImage"></div>
             </div>
-            <h2 class="postTitle"><?php the_title(); ?></h2>
-            <section class="post"><?php the_content(__('(more...)')); ?></section>
+            <section class="post">
+              <h2 class="postTitle"><?php the_title(); ?></h2>
+              <?php the_content(__('(more...)')); ?>
+            </section>
             <section class="postText">
               <?php 
               $copyText = get_post_meta( get_the_ID(), 'copy_text', true );

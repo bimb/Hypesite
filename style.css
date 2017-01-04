@@ -235,9 +235,7 @@ div#inicioMobile{display: none; margin-top: 60px;}
 
 /* ACERCA DE */
 
-section.section-home#post-acerca-de {
-    min-height: 550px;
-}
+section.section-home#post-acerca-de {min-height: 550px;}
 #post-acerca-de section.post {
     float: left;
     margin-left: 50px;
@@ -245,7 +243,6 @@ section.section-home#post-acerca-de {
     width: 100%;
 }
 #post-acerca-de .thumbnail {
-    border: 1px solid red;
     margin-right: 30px;
     position: absolute;
     right: 0;
@@ -254,7 +251,6 @@ section.section-home#post-acerca-de {
 }
 #post-acerca-de .thumbnail img {height: auto;width: 100%;}
 #post-acerca-de .thumbnail .bottomImage {
-    border: 1px solid blue;
     width: 100px;
     height: 200px;
     position: absolute;
@@ -264,14 +260,13 @@ section.section-home#post-acerca-de {
     background-repeat: no-repeat;
 }
 #post-acerca-de section.postText {
-    position: absolute;
-    width: 400px;
-    left: 45%;
-    z-index: 10;
-    border: 1px solid red;
+    bottom: 15%;
     font-size: 4em;
     font-family: 'DINPro-Bold';
-    bottom: 15%;
+    left: 45%;
+    position: absolute;
+    width: 400px;
+    z-index: 10;
 }
 
 /* ENTRENAMIENTO */
