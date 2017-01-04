@@ -25,7 +25,7 @@ if($ajaxload == false)
                 <div class="bottomImage"></div>
             </div>
             <section class="post">
-              <h2 class="postTitle"><?php the_title(); ?></h2>
+              <h1 class="postTitle"><?php the_title(); ?></h1>
               <?php the_content(__('(more...)')); ?>
             </section>
             <section class="postText">
