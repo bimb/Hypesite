@@ -122,7 +122,7 @@ ul#menu-main-menu li:hover{color: #be00ff;}
   float: right;
 }
 
-h1, h2, h3{position: relative; font-weight: normal; margin: 0; padding: 0}
+h1, h2, h3{font-family:'DINPro-Bold'; position: relative; font-weight: normal; margin: 0; padding: 0}
 
 h3.textoTitulo:after{border:none;}
 
