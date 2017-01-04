@@ -17,7 +17,7 @@ if($ajaxload == false)
 
 	<article class="postWrapper" id="post-acerca-de">
             
-            <div class="tumbnail">
+            <div class="thumbnail">
                 <?php 
                     if ( has_post_thumbnail() ) 
                         the_post_thumbnail(); 
