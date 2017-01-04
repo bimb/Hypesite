@@ -250,6 +250,7 @@ section.section-home#post-acerca-de {
     position: absolute;
     right: 0;
     width: 38%;
+    z-index: 9;
 }
 #post-acerca-de .thumbnail img {height: auto;width: 100%;}
 #post-acerca-de .thumbnail .bottomImage {
