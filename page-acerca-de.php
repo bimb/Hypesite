@@ -25,8 +25,13 @@ if($ajaxload == false)
             </div>
 
             <section class="post"><?php the_content(__('(more...)')); ?></section>
-            <div class="centerImage"></div>
-            <div class="rightImage"></div>
+            <section class="postText">
+              <?php 
+              $copyText = get_post_meta( get_the_ID(), 'copy_text', true );
+              if ( ! empty( $copyText ) ) echo $copyText;
+              ?>
+            </section>
+            <div class="bottomImage"></div>
                 
     </article>
 

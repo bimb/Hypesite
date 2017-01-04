@@ -63,7 +63,7 @@ html {
 }
 
 body, html{
-    font-family: 'DINPro-Regular';
+    font-family: 'DINPro-Medium';
     height: 100%; 
     width: 100%;
     position: relative;
@@ -227,6 +227,8 @@ div#inicioMobile{display: none; margin-top: 60px;}
     max-width: 400px;
     width: 100%;
 }
+
+#post-acerca-de .bottomImage{}
 
 /* HORARIOS */
 
