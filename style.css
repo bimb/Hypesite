@@ -221,14 +221,34 @@ div#inicioMobile{display: none; margin-top: 60px;}
 
 /* ACERCA DE */
 
+#post-acerca-de.section-home {
+    min-height: 550px;
+}
 #post-acerca-de section.post {
     float: left;
     margin-left: 50px;
     max-width: 400px;
     width: 100%;
 }
-
-#post-acerca-de .bottomImage{}
+#post-acerca-de .thumbnail {
+    border: 1px solid red;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    overflow: hidden;
+    width: 38%;
+    direction: rtl;
+}
+#post-acerca-de .thumbnail .bottomImage {
+    border: 1px solid blue;
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    bottom: -100px;
+    right: 15%;
+    background-image: url('images/colorShapesBottom.png');
+    background-repeat: no-repeat;
+}
 
 /* ENTRENAMIENTO */
 
