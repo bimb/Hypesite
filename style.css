@@ -129,7 +129,19 @@ h3.textoTitulo:after{border:none;}
 /**  Sections */
 
 section{box-sizing: border-box; padding:0px; display: table; width: 100%; position: relative;}
-section h1{text-transform: uppercase;}
+section h1 {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+section h1:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  top: 0;
+  width: 600px;
+}
+
 section p{margin-top: 0;}
 section.post {float: left; padding: 0;}
 section.section-home{min-height: 60vh; border-bottom: 2px solid #000;}
@@ -143,6 +155,7 @@ div#tumbnail {
     width: 100%;
     z-index: 0;
 }
+
 div#tumbnail img {
     width: 100%;
     height: auto;
@@ -158,6 +171,7 @@ article.postWrapper {
     max-width: 1920px;
     margin: 0 auto;
     border: 1px solid red;
+    overflow: auto;
 }
 
 
@@ -256,6 +270,23 @@ div#inicioMobile{display: none; margin-top: 60px;}
     background-color: #000;
     color: #fff;
 }
+
+#home-entrenamiento section.post {
+    float: left;
+    margin-left: 50px;
+    width: 400px;
+}
+
+img.colorShapesEntrenamiento {
+    float: left;
+    width: 120px;
+    margin: 100px 50px;
+}
+
+#home-entrenamiento section h1:before {
+  background-color: #fff;
+}
+
 
 /* HORARIOS */
 
