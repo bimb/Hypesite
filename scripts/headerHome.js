@@ -18,7 +18,7 @@ $(document).ready(function(){
     $.ajaxSetup({cache:false});
     
     //$("#home-inicio").load(post_url0, function(){ $('.cycle-slideshow').cycle();});
-    $("#home-inicio").load(post_url0);
+    $("#home-inicio").load(post_url0, arrowSlide);
     $("#home-acerca-de").load(post_url1);
     $("#home-horarios").load(post_url2);
     $("#home-reservar").load(post_url3);
@@ -33,9 +33,14 @@ $(document).ready(function(){
     $("#logo").click(function() {
         $("html, body").animate({ scrollTop: $('#home-inicio').offset().top }, 1000);
     });
-    $(".downArrow").click(function() {
+    
+    function arrowSlide(){
+        $("#home-inicio .downArrow").click(function() {
+        console.log('HI!!');
         $("html, body").animate({ scrollTop: $('#home-acerca-de').offset().top }, 1000);
-    });
+        });
+    }
+    
 
     //Mobile menu... not yet confirmed
     $("#menu-item-7-mobile").click(function() {

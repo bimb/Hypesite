@@ -225,7 +225,16 @@ article.postWrapper {
     text-align: center;
     width: 33%;
 }
-#home-inicio .downArrow{height: 65px; margin: 0 auto; width: 65px; border:1px solid red;}
+#home-inicio .downArrow{
+  background-image: url('images/arrow.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  height: 45px; 
+  margin: 0 auto; 
+  width: 45px; 
+}
 
 /* ACERCA DE */
 
