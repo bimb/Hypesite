@@ -25,7 +25,7 @@ $(document).ready(function(){
     $("#home-contacto").load(post_url4);
     $("#home-entrenamiento").load(post_url5);
     $("#home-yoga").load(post_url6);
-    $("#home-instructores").load(post_url7);
+    $("#home-instructores").load(post_url7, function(){ $('.slideshow').cycle();});
     
     
     $("ul#menu-main-menu li a").removeAttr("href");

@@ -12,56 +12,42 @@ if(isset($_GET['ajaxload']))
 if($ajaxload == false)
     get_header();
 
-  if (have_posts()) : ?><script src="http://malsup.github.com/jquery.cycle2.js"></script>
-<?php    while (have_posts()) : the_post();
-  ?>
+  if (have_posts()) : ?>
 
-	<div class="slideshow" 
-    data-cycle-fx=carousel
-    data-cycle-timeout=0
-    data-cycle-carousel-visible=5
-    data-cycle-next="#next"
-    data-cycle-prev="#prev"
-    data-cycle-pager="#pager"
-    >
-    <img src="http://malsup.github.io/images/beach1.jpg">
-    <img src="http://malsup.github.io/images/beach2.jpg">
-    ...
-    <img src="http://malsup.github.io/images/beach9.jpg">
-</div>
+<script type="text/javascript">$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
+    <div class="slideshow" 
+    	data-cycle-log="false"
+        data-cycle-fx=carousel
+        data-cycle-timeout=0
+        data-cycle-next="#next3"
+        data-cycle-prev="#prev3"
+        data-cycle-slides="> div"
+        >
+        
 
-<div class=center>
-    <a href=# id=prev>&lt;&lt; Prev </a>
-    <a href=# id=next> Next &gt;&gt; </a>
-</div>
 
-<div class="cycle-pager" id=pager></div>
+<?php while (have_posts()) : the_post(); ?>
+
+	<div>
+		<a href="<?php the_permalink(); ?>">
+		<?php if ( has_post_thumbnail() )the_post_thumbnail(); ?>
+		<div class="name"><?php the_title(); ?></div>
+		</a>
+	</div>
 
   <?php
 
-  endwhile; else: ?>
+  endwhile; ?>
 
-    <p>Sorry, no pages matched your criteria.</p>
-    <div class="slideshow" 
-    data-cycle-fx=carousel
-    data-cycle-timeout=0
-    data-cycle-carousel-visible=5
-    data-cycle-next="#next"
-    data-cycle-prev="#prev"
-    data-cycle-pager="#pager"
-    >
-    <img src="http://malsup.github.io/images/beach1.jpg">
-    <img src="http://malsup.github.io/images/beach2.jpg">
-    ...
-    <img src="http://malsup.github.io/images/beach9.jpg">
-</div>
+    </div>
+    <div class=center>
+        <a href=# id=prev3>&lt;&lt; Prev </a>
+        <a href=# id=next3> Next &gt;&gt; </a>
+    </div>
 
-<div class=center>
-    <a href=# id=prev>&lt;&lt; Prev </a>
-    <a href=# id=next> Next &gt;&gt; </a>
-</div>
+<?php else: ?>
 
-<div class="cycle-pager" id=pager></div>
+    <p></p>
 
 <?php
   endif;

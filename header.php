@@ -10,6 +10,7 @@
 	<style type="text/css" media="screen">
 		@import url( <?php bloginfo('stylesheet_url'); ?> );
         @import url( <?php bloginfo('template_url'); ?>/scripts/lightbox/css/lightbox.css );
+        @import url( <?php bloginfo('template_url'); ?>/carousel.css );
 	</style>
 
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
@@ -18,9 +19,10 @@
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/scripts/jquery-latest.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/headerHome.js"></script>
-    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/scripts/jquery.cycle2.min.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/scripts/jquery.cycle2.carousel.min.js"></script>
         
 	<?php
     wp_get_archives('type=monthly&format=link');
