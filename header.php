@@ -20,7 +20,7 @@
         
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/headerHome.js"></script>
-    <!--script src="http://malsup.github.com/jquery.cycle2.js"></script-->
+    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
         
 	<?php
     wp_get_archives('type=monthly&format=link');
