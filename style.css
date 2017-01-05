@@ -284,8 +284,7 @@ img.colorShapesEntrenamiento {
 #entrenamientoBloques{
   width: 100%;
   box-sizing: border-box;
-  padding-top: 50px;
-  margin: 50px;
+  padding: 50px;
   -webkit-column-count: 3; /* Chrome, Safari, Opera */
   -moz-column-count: 3; /* Firefox */
   column-count: 3;
@@ -294,6 +293,34 @@ img.colorShapesEntrenamiento {
 #entrenamientoBloques #bloque img{
   width: 100%;
   height: auto;
+  margin-bottom: 30px;
+}
+
+#entrenamientoBloques #bloque{
+  position: relative;
+}
+
+#entrenamientoBloques #bloque #cajaTexto{
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0,0,0,.5);
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#entrenamientoBloques #bloque:hover #cajaTexto{display: block;}
+
+#entrenamientoBloques #bloque #cajaTexto h1{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
 }
 
 
