@@ -122,7 +122,7 @@ ul#menu-main-menu li:hover{color: #be00ff;}
   float: right;
 }
 
-h1, h2, h3{font-family: 'AvantGardeITCbyBT-Book'; position: relative; font-weight: normal; margin: 0; padding: 0}
+h1, h2, h3{font-family: 'AvantGardeITCbyBT-Demi'; position: relative; font-weight: normal; margin: 0; padding: 0}
 
 h3.textoTitulo:after{border:none;}
 
@@ -172,7 +172,6 @@ div#tumbnail img {
 article.postWrapper {
     max-width: 1920px;
     margin: 0 auto;
-    border: 1px solid red;
     overflow: auto;
 }
 
@@ -237,7 +236,7 @@ div#inicioMobile{display: none; margin-top: 60px;}
 
 /* ACERCA DE */
 
-section.section-home#post-acerca-de {min-height: 550px;}
+section.section-home#home-acerca-de {min-height: 550px;}
 #post-acerca-de section.post {
     float: left;
     margin-left: 50px;
@@ -271,8 +270,8 @@ section.section-home#post-acerca-de {min-height: 550px;}
 #post-acerca-de section.postText {
     bottom: 15%;
     font-size: 4em;
-    font-family: 'AvantGardeITCbyBT-Book';
-    left: 45%;
+    font-family: 'AvantGardeITCbyBT-Demi';
+    left: 42%;
     position: absolute;
     width: 400px;
     z-index: 10;
