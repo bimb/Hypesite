@@ -329,14 +329,18 @@ img.colorShapesEntrenamiento {
 
 #entrenamientoBloques #bloque:hover #cajaTexto{opacity: 1;}
 
-#entrenamientoBloques #bloque #cajaTexto{
+#entrenamientoBloques #bloque #cajaTexto #texto{
     position: absolute;
     width: 50%;
-    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
-#entrenamientoBloques #bloque #cajaTexto h1{
+#entrenamientoBloques #bloque #cajaTexto #texto h1{
     width: 100%;
 }
 
