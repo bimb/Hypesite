@@ -14,6 +14,7 @@ if($ajaxload == false)
 <section class="section-home" id="home-inicio"></section>
 <section class="section-home" id="home-acerca-de"></section>
 <section class="section-home" id="home-entrenamiento"></section>
+<section class="section-home" id="home-yoga"></section>
 <section class="section-home" id="home-horarios"></section>
 <section class="section-home" id="home-reservar"></section>
 <section class="section-home" id="home-contacto"></section>

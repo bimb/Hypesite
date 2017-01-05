@@ -5,10 +5,11 @@ $(document).ready(function(){
    
     var post_url0 = myURL+"inicio/?ajaxload=true";
     var post_url1 = myURL+"acerca-de/?ajaxload=false";
-    var post_url5 = myURL+"entrenamiento/?ajaxload=false";
     var post_url2 = myURL+"horarios/?ajaxload=false";
     var post_url3 = myURL+"reservar/?ajaxload=false";   
     var post_url4 = myURL+"contacto/?ajaxload=false";
+    var post_url5 = myURL+"entrenamiento/?ajaxload=false";
+    var post_url6 = myURL+"yoga/?ajaxload=false";
 
     
     
@@ -18,10 +19,11 @@ $(document).ready(function(){
     //$("#home-inicio").load(post_url0, function(){ $('.cycle-slideshow').cycle();});
     $("#home-inicio").load(post_url0);
     $("#home-acerca-de").load(post_url1);
-    $("#home-entrenamiento").load(post_url5);
     $("#home-horarios").load(post_url2);
     $("#home-reservar").load(post_url3);
     $("#home-contacto").load(post_url4);
+    $("#home-entrenamiento").load(post_url5);
+    $("#home-yoga").load(post_url6);
     
     
     $("ul#menu-main-menu li a").removeAttr("href");
