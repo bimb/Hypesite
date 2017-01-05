@@ -12,7 +12,8 @@ if(isset($_GET['ajaxload']))
 if($ajaxload == false)
     get_header();
 
-  if (have_posts()) : while (have_posts()) : the_post();
+  if (have_posts()) : ?><script src="http://malsup.github.com/jquery.cycle2.js"></script>
+<?php    while (have_posts()) : the_post();
   ?>
 
 	<div class="slideshow" 
