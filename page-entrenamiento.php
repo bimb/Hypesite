@@ -30,6 +30,7 @@ if($ajaxload == false)
           <div class="thumbnail"><?php the_post_thumbnail(); ?></div>
           <div id="cajaTexto">
             <h1><?php the_title(); ?></h1>
+            <?php the_content(); ?>
           </div>
         </div>
   <?php endwhile; else : ?>

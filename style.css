@@ -316,12 +316,17 @@ img.colorShapesEntrenamiento {
 
 #entrenamientoBloques #bloque:hover #cajaTexto{opacity: 1;}
 
-#entrenamientoBloques #bloque #cajaTexto h1{
+#entrenamientoBloques #bloque #cajaTexto{
     position: absolute;
-    top: 40%;
-    width: 100%;
+    width: 50%;
+    margin: 0 auto;
     text-align: center;
 }
+
+#entrenamientoBloques #bloque #cajaTexto h1{
+    width: 100%;
+}
+
 
 
 /* HORARIOS */
