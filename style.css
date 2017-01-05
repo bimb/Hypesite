@@ -237,12 +237,15 @@ section.section-home#home-acerca-de {min-height: 550px;}
     width: 100%;
 }
 #post-acerca-de h1.postTitle {
-    border-top: 3px solid #000;
-    margin: 0;
     padding: 0;
     margin-top: 10px;
     display: inline-block;
 }
+
+#post-acerca-de h1.postTitle:before {
+  background-color: #000;
+}
+
 #post-acerca-de .thumbnail {
     margin-right: 30px;
     position: absolute;
@@ -346,77 +349,53 @@ img.colorShapesEntrenamiento {
 
 /* YOGA */
 
-#home-entrenamiento {
-    background-color: #000;
-    color: #fff;
-}
-
-#home-entrenamiento section.post {
-    float: left;
-    margin-left: 50px;
+#home-yoga section.post {
+    float: right;
+    margin-right: 17%;
     width: 400px;
     clear: both;
+    margin-top: 3%;
+    text-align: right;
 }
 
-img.colorShapesEntrenamiento {
-    float: left;
-    width: 120px;
-    margin: 100px 50px;
+#home-yoga section h1:before {
+  background-color: #000;
+  right: 0px;
 }
 
-#home-entrenamiento section h1:before {
-  background-color: #fff;
+#home-yoga .imageHero{
+  width: 80%;
+  margin-left: 50px;
 }
 
-#entrenamientoBloques{
-  width: 100%;
-  box-sizing: border-box;
-  padding: 50px;
-  -webkit-column-count: 3; /* Chrome, Safari, Opera */
-  -moz-column-count: 3; /* Firefox */
-  column-count: 3;
-}
-
-#entrenamientoBloques #bloque img{
+#home-yoga .imageHero img{
   width: 100%;
   height: auto;
-  margin-bottom: 6%;
 }
 
-#entrenamientoBloques #bloque{
-  position: relative;
-}
-
-#entrenamientoBloques #bloque #cajaTexto{
-  position: absolute;
-  opacity: 0;
-  width: 100%;
-  z-index: 1;
-  height: 100%;
-  top: 0;
-  background-color: rgba(0,0,0,.5);
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-#entrenamientoBloques #bloque:hover #cajaTexto{opacity: 1;}
-
-#entrenamientoBloques #bloque #cajaTexto #texto{
+#home-yoga section.postText {
+    top: 15%;
+    font-size: 5em;
+    font-family: 'AvantGardeITCbyBT-Demi';
+    right: 5%;
     position: absolute;
-    width: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    width: 400px;
+    z-index: 10;
+}
+    
+img.colorShapesBottomDos {
+    position: absolute;
+    width: 50px;
+    margin: -5% 0 0 20%;
+    z-index: 10;
 }
 
-#entrenamientoBloques #bloque #cajaTexto #texto h1{
-    width: 100%;
+#home-yoga #entrenamientoBloques #bloque #cajaTexto{
+  background-color: rgba(255,255,255,.7);
 }
+
+#home-yoga #entrenamientoBloques #bloque:hover #cajaTexto{opacity: 1;}
+
 
 /* HORARIOS */
 

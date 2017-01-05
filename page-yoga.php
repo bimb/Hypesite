@@ -16,6 +16,19 @@ if($ajaxload == false)
   ?>
 
 	<article class="postWrapper" id="yoga">
+  <div class="imageHero">
+                <?php 
+                    if ( has_post_thumbnail() ) 
+                        the_post_thumbnail(); 
+                ?>
+  </div>
+  <section class="postText">
+  <?php 
+    $copyText = get_post_meta( get_the_ID(), 'copy_text', true );
+    if ( ! empty( $copyText ) ) echo $copyText;
+              ?>
+  </section>
+ <img class="colorShapesBottomDos" src="<?php bloginfo('template_url'); ?>/images/colorShapesBottomDos.png" />
   <section class="post">
   <h1 class="postTitle"><?php the_title(); ?></h1>
   <?php the_content(); ?>
@@ -23,7 +36,7 @@ if($ajaxload == false)
   
   <div id="entrenamientoBloques">
 
-  <?php $query = new WP_Query( 'cat=4' ); ?>
+  <?php $query = new WP_Query( 'cat=5' ); ?>
    <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
         <div id="bloque">
           <div class="thumbnail"><?php the_post_thumbnail(); ?></div>
