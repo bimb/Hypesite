@@ -30,6 +30,11 @@ if($ajaxload == false)
               ?>
             </section>
             <div class="leftImage"></div>
+            <ul>
+              <li>chihuahua 78<br>roma norte</li>
+              <li>hypetraining.mx<br>@hypetrainingmx</li>
+              <li>yoga, running, pilates,<br>funcitonal,trx</li>
+            </ul>
             
                 
     </article>

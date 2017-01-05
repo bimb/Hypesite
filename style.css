@@ -184,9 +184,9 @@ article.postWrapper {
 
 #home-inicio .thumbnail  {
     height: 90vh;
-    margin-left: 10px; 
+    margin-left: 10%; 
     overflow: hidden;
-    width: 70%;
+    width: 66%;
 }
 #home-inicio .thumbnail img {
     width: 100%;
@@ -198,19 +198,32 @@ article.postWrapper {
   background-size: 100%;
   position: absolute;
   left: 0;
-  bottom: 10%;
-  height: 70px;
-  width: 200px;
+  bottom: 15%;
+  height: 10%;
+  width: 10%;
 }
 #home-inicio .postText {
     top: 15%;
-    font-size: 4em;
+    font-size: 6em;
     font-family: 'AvantGardeITCbyBT-Demi';
     right: 5%;
     position: absolute;
     width: 400px;
     z-index: 10;
-
+}
+#home-inicio ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+}
+#home-inicio ul li {
+    display: inline-block;
+    float: none;
+    font-size: 1.5em;
+    text-align: center;
+    width: 33%;
 }
 
 
