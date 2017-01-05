@@ -35,6 +35,7 @@ if($ajaxload == false)
               <li>hypetraining.mx<br>@hypetrainingmx</li>
               <li>yoga, running, pilates,<br>funcitonal,trx</li>
             </ul>
+            <div class="downArrow"></div>
             
                 
     </article>

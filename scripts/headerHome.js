@@ -29,6 +29,9 @@ $(document).ready(function(){
     $("#logo").click(function() {
         $("html, body").animate({ scrollTop: $('#home-inicio').offset().top }, 1000);
     });
+    $(".downArrow").click(function() {
+        $("html, body").animate({ scrollTop: $('#home-acerca-de').offset().top }, 1000);
+    });
 
     //Mobile menu... not yet confirmed
     $("#menu-item-7-mobile").click(function() {
