@@ -302,7 +302,7 @@ img.colorShapesEntrenamiento {
 
 #entrenamientoBloques #bloque #cajaTexto{
   position: absolute;
-  display: none;
+  opacity: 0;
   width: 100%;
   z-index: 1;
   height: 100%;
@@ -314,7 +314,7 @@ img.colorShapesEntrenamiento {
   transition: all .3s ease-in-out;
 }
 
-#entrenamientoBloques #bloque:hover #cajaTexto{display: block;}
+#entrenamientoBloques #bloque:hover #cajaTexto{opacity: 1;}
 
 #entrenamientoBloques #bloque #cajaTexto h1{
     position: absolute;
