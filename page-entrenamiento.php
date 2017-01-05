@@ -21,9 +21,19 @@ if($ajaxload == false)
   <h1 class="postTitle"><?php the_title(); ?></h1>
   <?php the_content(); ?>
   </section>
+  
+  <div id="entrenamientoBloques">
 
-                
-    </article>
+  <?php $query = new WP_Query( 'cat=4' ); ?>
+   <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+        <div id="bloque">
+          <div class="thumbnail"><?php the_post_thumbnail(); ?></div>
+        </div>
+  <?php endwhile; else : ?>
+    <p><?php _e( 'Los sentimos aun no hay entradas en esta categoria' ); ?></p>
+  <?php endif; ?>
+  </div>          
+  </article>
 
   <?php
 

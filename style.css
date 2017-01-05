@@ -290,6 +290,21 @@ img.colorShapesEntrenamiento {
   background-color: #fff;
 }
 
+#entrenamientoBloques{
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 50px;
+  margin: 50px;
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+}
+
+#entrenamientoBloques #bloque img{
+  width: 100%;
+  height: auto;
+}
+
 
 /* HORARIOS */
 
