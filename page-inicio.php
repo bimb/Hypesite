@@ -17,16 +17,20 @@ if($ajaxload == false)
 
 	<article class="postWrapper" id="post-inicio">
             
-            <div class="tumbnail">
+            <div class="thumbnail">
                 <?php 
                     if ( has_post_thumbnail() ) 
                         the_post_thumbnail(); 
                 ?>
             </div>
-
-
+            <section class="postText">
+              <?php 
+              $copyText = get_post_meta( get_the_ID(), 'copy_text', true );
+              if ( ! empty( $copyText ) ) echo $copyText;
+              ?>
+            </section>
             <div class="leftImage"></div>
-            <div class="rightImage"></div>
+            
                 
     </article>
 

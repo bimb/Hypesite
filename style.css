@@ -190,7 +190,7 @@ section#home-inicio header img {
     display: block;
     margin: 0 auto;
 }
-#home-inicio header{
+#home-inicio header, #home-inicio .tumbnail{
     /*width: 65%;*/
     margin: 0;
     position: absolute;
@@ -200,31 +200,20 @@ section#home-inicio header img {
     -webkit-transform: translate(-50%,-50%); /* Safari */
     transform: translate(-50%,-50%);
 }
-#home-inicio h1{font-size:40px; width:100%; text-align: center; line-height: 1; color:#000; text-transform: uppercase;}
-#home-inicio h1:after{border:none;}
-#home-inicio article section.post{margin-top: 30px;}
-#home-inicio article section.post a.viewmore{
-    padding:6px 40px;
-    border: 1px solid #fff;
-    margin-top: 20px;
-    display: inline-block;
-    border-radius: 5px;
-    cursor: pointer;
-    color:#fff;
+#home-inicio .tumbnail img {
+    width: 100%;
+    height: auto;
 }
-
-div#inicioMobile{display: none; margin-top: 60px;}
-#home-inicio header .sloganOneImgB{display: none;}
-
 #home-inicio .leftImage {
-    border: 1px solid red;
-    position: absolute;
-    left: 0;
-    bottom: 10%;
-    height: 150px;
-    width: 200px;
+  background-image: url('images/colorShapesBottom.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 10%;
+  height: 150px;
+  width: 200px;
 }
-#home-inicio .rightImage {
+#home-inicio .postText {
     border: 1px solid red;
     position: absolute;
     right: 0px;
@@ -259,13 +248,13 @@ section.section-home#home-acerca-de {min-height: 550px;}
 }
 #post-acerca-de .thumbnail img {height: auto;width: 100%;}
 #post-acerca-de .thumbnail .bottomImage {
-    width: 100px;
-    height: 200px;
-    position: absolute;
-    bottom: -100px;
-    right: 15%;
-    background-image: url('images/colorShapesBottom.png');
-    background-repeat: no-repeat;
+  background-image: url('images/colorShapesBottom.png');
+  background-repeat: no-repeat;
+  bottom: -100px;
+  height: 200px;
+  position: absolute;
+  right: 15%;
+  width: 100px;
 }
 #post-acerca-de section.postText {
     bottom: 15%;
