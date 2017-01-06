@@ -56,8 +56,8 @@
 .center{text-align: center;}
 
 .slideshow { margin: auto }
-.slideshow a {display: block;height: 200px;position: relative;}
-.slideshow a:hover > .name {display: inline-block;}
+.slideshow a {display: inline-block;height: 200px;position: relative;vertical-align: text-bottom;}
+.slideshow a:hover > .name {display: block;}
 .slideshow img { width: 200px; height: auto; padding: 2px; }
 div.responsive img { width: auto; height: auto }
 .slideshow .name {
@@ -89,7 +89,10 @@ div.responsive img { width: auto; height: auto }
     transform: rotate(90deg);    
     width: 40px;
 }
-.center a:last-child {float: right;transform: rotate(-90deg)ç;
+.center a:last-child {float: right;transform: rotate(-90deg);}
+.instructorContainer {clear: both;margin-bottom: 150px;}
+.slideshowContainer {clear: both; position: relative;}
+.loadingInstructor{display: none;}
 
 /* 
     media queries 

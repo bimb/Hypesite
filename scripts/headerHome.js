@@ -25,7 +25,7 @@ $(document).ready(function(){
     $("#home-contacto").load(post_url4);
     $("#home-entrenamiento").load(post_url5);
     $("#home-yoga").load(post_url6);
-    $("#home-instructores").load(post_url7, function(){ $('.slideshow').cycle();});
+    $("#home-instructores").load(post_url7, ajaxLoadInstructores);
     
     
     $("ul#menu-main-menu li a").removeAttr("href");
@@ -39,6 +39,24 @@ $(document).ready(function(){
         console.log('HI!!');
         $("html, body").animate({ scrollTop: $('#home-acerca-de').offset().top }, 1000);
         });
+    }
+
+    function ajaxLoadInstructores(){
+        $('.slideshow').cycle();
+
+        $(".slideshow a").click(function(){
+        
+        $.ajaxSetup({cache:false});
+        var post_url = $(this).attr("href")+"?ajaxload=false";
+        var link_id = $(this).attr('id');
+        var divHeight = $(".loadingInstructor").height();
+
+        $(".instructorContainer").css("height", divHeight);
+        $(".loadingInstructor").fadeOut();
+        $(".loadingInstructor").load(post_url, function(){$(".loadingInstructor").fadeIn();});
+
+        return false;
+    });
     }
     
 

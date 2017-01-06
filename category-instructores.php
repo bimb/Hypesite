@@ -14,7 +14,11 @@ if($ajaxload == false)
 
   if (have_posts()) : ?>
 
-<script type="text/javascript">$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
+  <script type="text/javascript">$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
+  <div class="instructorContainer">
+    <div class="loadingInstructor"></div>
+  </div>
+  <div class="slideshowContainer">
     <div class="slideshow" 
     	data-cycle-log="false"
         data-cycle-fx=carousel
@@ -24,8 +28,6 @@ if($ajaxload == false)
         data-cycle-slides="> div"
         >
         
-
-
 <?php while (have_posts()) : the_post(); ?>
 
 	<div>
@@ -44,13 +46,14 @@ if($ajaxload == false)
         <a href=# id=prev3>&lt;&lt; Prev </a>
         <a href=# id=next3> Next &gt;&gt; </a>
     </div>
-
+    </div>
 <?php else: ?>
 
     <p></p>
 
+<?php endif; ?>
+
 <?php
-  endif;
 
   if($ajaxload == false)get_footer(); 
 ?>

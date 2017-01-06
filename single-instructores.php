@@ -4,7 +4,13 @@
   *@desc A single blog post See page.php is for a page layout.
   */
 
-  get_header();
+    $ajaxload = false;
+
+  if(isset($_GET['ajaxload']))
+      $ajaxload = $_GET['ajaxload'];
+
+  if($ajaxload == false)
+      get_header();
 
   if (have_posts()) : while (have_posts()) : the_post();
   ?>
@@ -33,6 +39,5 @@
 <?php
   endif;
 
-  get_footer();
-
+  if($ajaxload == false)get_footer(); 
 ?>
