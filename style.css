@@ -411,6 +411,7 @@ img.colorShapesBottomDos {
 #home-yoga #entrenamientoBloques #bloque:hover #cajaTexto{opacity: 1;}
 
 /* INSTRUCTORES */
+section#home-instructores{min-height: auto;}
 section#home-instructores h1 {
     text-align: center;
     margin: 0 auto;
@@ -506,7 +507,7 @@ section#home-instructores h1 {
 
 
 /* CONTACTO */
-section#home-contacto{min-height: auto;}
+section#home-contacto, section#home-footer{min-height: auto;}
 section#home-contacto h1 {
   border-top: 3px solid #000;
   display: table;
