@@ -77,12 +77,12 @@ body, html{
 #canvas {height: 100%; width: 100%; position: relative; }
 
 /** Header and menu */
-header#navegacion {background-color: #fff;left: 0; margin-top: 0;max-width: 1920px; position: fixed;text-align: center;top: 0;width: 100%;z-index: 999;}
+header#navegacion {background-color: #fff;left: 0; margin-top: 0;max-width: 1920px; position: fixed;text-align: center;top: 0;width: 100%;z-index: 9999;}
 header#navegacion #logo {cursor: pointer;float: left;margin: 0px 10px 10px 75px; position: relative;width: 100px;}
 header#navegacion #logo img{width: 100%; height: auto; display: block;}
 header#navegacion ul#menu-main-menu, header#navegacion ul#menu-main-menu li{list-style: none; position: relative;}
 header#navegacion ul#menu-main-menu li{cursor: pointer; float: none; font-size: 1.2em; padding-top:0;}
-header#navegacion ul#menu-main-menu li a{color: #000; text-decoration: none; text-transform: uppercase; font-family: sans-serif;}
+header#navegacion ul#menu-main-menu li a{color: #000;font-family: 'AvantGardeITCbyBT-Demi';font-size: 0.75em;letter-spacing: 0.1em;text-decoration: none;text-transform: uppercase;}
 header#navegacion ul#menu-main-menu li a:hover { color: #666; !important; text-decoration: none; }
 
 #primaryContent{ width: 100%;}

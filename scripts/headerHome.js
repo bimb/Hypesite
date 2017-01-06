@@ -83,6 +83,11 @@ $(document).ready(function(){
             if ($(window).width() < 729) 
                 $('ul#menu-main-menu').fadeOut(); 
         break;
+        case "menu-item-169"://Instructores
+            $("html, body").animate({ scrollTop: $('#home-instructores').offset().top }, 1000);
+            if ($(window).width() < 729) 
+                $('ul#menu-main-menu').fadeOut(); 
+        break;
         case "menu-item-16"://Horarios
             $("html, body").animate({ scrollTop: $('#home-horarios').offset().top }, 1000);
             if ($(window).width() < 729) 
