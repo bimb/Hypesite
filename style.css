@@ -79,7 +79,15 @@ a{color: #000;}
 #canvas {height: 100%; width: 100%; position: relative; }
 
 /** Header and menu */
-header#navegacion {background-color: #fff;left: 0; margin-top: 0;max-width: 1920px; position: fixed;text-align: center;top: 0;width: 100%;z-index: 9999;}
+header#navegacion {background-color: #fff;left: 0; margin-top: 0;max-width: 1920px; position: fixed;text-align: center;top: 0;width: 100%;z-index: 9999;
+  -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Chrome/Safari/Opera */
+       -khtml-user-select: none; /* Konqueror */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    not supported by any browser */
+}
 header#navegacion #logo {cursor: pointer;float: left;margin: 0px 10px 10px 75px; position: relative;width: 100px;}
 header#navegacion #logo img{width: 100%; height: auto; display: block;}
 header#navegacion ul#menu-main-menu, header#navegacion ul#menu-main-menu li{list-style: none; position: relative;}
@@ -121,7 +129,8 @@ ul#menu-main-menu li:hover{color: #be00ff;}
 
 #primaryContent {
   width:100%;
-  float: right;
+  float: none;
+  min-width: 1280px;
 }
 
 h1, h2, h3{font-family: 'AvantGardeITCbyBT-Demi'; position: relative; font-weight: normal; margin: 0; padding: 0}
@@ -456,6 +465,7 @@ section#home-instructores h1 {
 
 #wrapperInstructor header h1 {
     font-size: 5em;
+    border-top: 0;
 }
 
 #wrapperInstructor header h1:before {
