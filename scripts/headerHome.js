@@ -126,7 +126,7 @@ $(document).ready(function(){
     }); 
 
     var header = $("#navegacion");
-    $(window).scroll(function() {
+    $(window).on("load scroll",function(e){
         var scroll = $(window).scrollTop();
 
         if (scroll >= 55) {
