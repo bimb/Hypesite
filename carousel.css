@@ -51,20 +51,45 @@
     background: black; color: white; padding: 15px; opacity: .5;
 }
 
-
-
-
 .disabled { opacity: .5; filter:alpha(opacity=50); }
-
 
 .center{text-align: center;}
 
-
 .slideshow { margin: auto }
-.slideshow img { width: 200px; height: 200px; padding: 2px; }
+.slideshow a {display: block;height: 200px;position: relative;}
+.slideshow a:hover > .name {display: inline-block;}
+.slideshow img { width: 200px; height: auto; padding: 2px; }
 div.responsive img { width: auto; height: auto }
-.cycle-pager { position: static; margin-top: 5px }
-div.vertical { width: 100px }
+.slideshow .name {
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    display: none;
+    font-family: 'AvantGardeITCbyBT-Demi';
+    font-size: 2.8em;
+    height: 100%;
+    padding-top: 40%;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 100%;
+    z-index: 2; 
+}
+.center {height: 40px;position: absolute;top: 40%;width: 100%;z-index: 999;}
+.center a {
+    background-color: #fff;
+    background-image: url(http://frutabomba.com.mx/tests/hype/wp-content/themes/Hype/images/arrow.png);
+    background-size: 100%;
+    border-radius: 100px;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 40px;
+    transform: rotate(90deg);    
+    width: 40px;
+}
+.center a:last-child {float: right;transform: rotate(-90deg)ç;
 
 /* 
     media queries 
