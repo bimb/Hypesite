@@ -146,7 +146,7 @@ section h1:before {
 
 section p{margin-top: 0;}
 section.post {float: left; padding: 0;}
-section.section-home{min-height: 60vh; border-bottom: 2px solid #000;}
+section.section-home{min-height: 60vh; /*border-bottom: 2px solid #000;*/}
 
 div#tumbnail {
     height: 100%;
@@ -506,7 +506,15 @@ section#home-instructores h1 {
 
 
 /* CONTACTO */
-
+section#home-contacto{min-height: auto;}
+section#home-contacto h1 {
+  border-top: 3px solid #000;
+  display: table;
+  float: none;
+  margin: 50px auto 20px auto;
+  padding: 5px 0px;
+  text-align: center;
+}
 
 
 @media only screen and (max-width : 729px) {
