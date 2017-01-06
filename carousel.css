@@ -75,7 +75,7 @@ div.responsive img { width: auto; height: auto }
     width: 100%;
     z-index: 2; 
 }
-.center {height: 40px;position: absolute;top: 40%;width: 100%;z-index: 999;}
+.center {height: 40px;position: absolute;top: 40%;width: 100%;z-index: 999; pointer-events: none;}
 .center a {
     background-color: #fff;
     background-image: url(http://frutabomba.com.mx/tests/hype/wp-content/themes/Hype/images/arrow.png);
@@ -88,6 +88,7 @@ div.responsive img { width: auto; height: auto }
     height: 40px;
     transform: rotate(90deg);    
     width: 40px;
+    pointer-events: all;
 }
 .center a:last-child {float: right;transform: rotate(-90deg);}
 .instructorContainer {clear: both;margin-bottom: 80px;}

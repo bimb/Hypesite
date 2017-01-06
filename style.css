@@ -413,7 +413,7 @@ img.colorShapesBottomDos {
 #home-yoga #entrenamientoBloques #bloque:hover #cajaTexto{opacity: 1;}
 
 /* INSTRUCTORES */
-section#home-instructores{min-height: auto;}
+section#home-instructores{min-height: auto; margin-bottom: 50px;}
 section#home-instructores h1 {
     text-align: center;
     margin: 0 auto;
@@ -500,10 +500,96 @@ section#home-instructores h1 {
 }
 
 /* HORARIOS */
+section#home-horarios {
+    background-color: #000;
+}
 
+.fc button, .fc-button-group, .fc-time-grid .fc-event .fc-time span {
+    display:block !important;
+}
 
+article#post-8 {
+    background-color: #000;
+    color: #fff;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
 
+#calendar .fc-left h2{
+    font-size: 4em;
+    text-transform: capitalize;
+}
 
+.fc-day-header{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: left !important;
+}
+article#post-8 h1{
+  padding-top: 30px;
+  clear: both;
+  text-transform: uppercase;
+}
+
+article#post-8 h1:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  top: 17px;
+  width: 100px;
+  background-color: #fff;
+}
+
+.fc hr, .fc tbody, .fc td, .fc th, .fc thead, .fc-row {
+    border-color: #000!important;
+    background: #000!important;
+}
+
+.fc-row.fc-widget-header {
+    margin-bottom: 30px !important;
+}
+
+.fc-event, .fc-event-dot {
+    background-color: #000 !important;
+    border: none !important;
+    color: #fff !important;
+    border-bottom: 1px dotted #fff !important;
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+    padding-bottom: 2px !important;
+    width: 90%;
+}
+
+span.fc-time {
+    display: block;
+}
+
+span.fc-title {
+    text-align: right;
+    width: 100%;
+    display: block;
+}
+
+span.fc-title p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.fc-state-default {
+    border: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    background-repeat: no-repeat !important;
+    border-color: transparent !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    font-size: 2em !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+*:focus {outline:0;}
 /* RESERVAR */
 
 

@@ -8,7 +8,6 @@
 
   if (have_posts()) : while (have_posts()) : the_post();
   ?>
-
 	<article class="postWrapper" id="post-<?php the_ID(); ?>">
 
 	<header>
