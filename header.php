@@ -69,7 +69,7 @@
 <body>
   <div id="canvas">
 <header id="navegacion">
-    <div id="logo"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="Hype Logo" /></div>
+    <div id="logo"><img class="logoNegro" src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="Hype Logo" /><img class="logoBlanco" src="<?php bloginfo('template_url'); ?>/images/logob.png" alt="Hype Logo" /></div>
     <div id="mobileMenu">
         <!-- Mobile Logo Here -->
     </div>
