@@ -172,7 +172,12 @@ div#tumbnail img {
 article.postWrapper {
     max-width: 1920px;
     margin: 0 auto;
-    overflow: auto;
+}
+
+article.postWrapper:after {
+    content:"";
+    display:block;
+    clear:both;
 }
 
 
@@ -405,6 +410,82 @@ img.colorShapesBottomDos {
 
 #home-yoga #entrenamientoBloques #bloque:hover #cajaTexto{opacity: 1;}
 
+
+/* INSTRUCTORES SINGLE */
+
+#wrapperInstructor {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#wrapperInstructor:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+#wrapperInstructor .thumbnail {
+    float: left;
+    width: 40%;
+}
+
+#wrapperInstructor .thumbnail img{
+    width: 100%;
+    height: auto;
+}
+
+#wrapperInstructor header {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    background-color: #fff;
+}
+
+#wrapperInstructor header h1 {
+    font-size: 5em;
+}
+
+#wrapperInstructor header h1:before {
+  content: "";
+  position: absolute;
+  height: 8px;
+  top: -8px;
+  width: 100px;
+  background-color: #000;
+}
+
+#contentInstructor {
+    float: left;
+    padding-top: 20%;
+    margin-left: 50px;
+    width: 45%;
+}
+
+#contentInstructor h3 {
+    text-transform: uppercase;
+}
+
+#contentInstructor p {
+    font-size: 16px;
+}
+
+#wrapperInstructor img.colorShapesBottomDos {
+    position: absolute;
+    width: 4%;
+    z-index: 10;
+    bottom: -10%;
+    left: 30%;
+    margin: 0;
+}
+
+#wrapperInstructor img.colorShapesRight {
+    position: absolute;
+    width: 12%;
+    z-index: 10;
+    top: 10%;
+    right: 0;
+}
 
 /* HORARIOS */
 

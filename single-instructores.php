@@ -10,13 +10,17 @@
   ?>
 
 	<article class="postWrapper" id="post-<?php the_ID(); ?>">
-
-	<header>
-	    <h1 class="postTitle"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-	</header>
-
-      <section class="post"><?php the_content(__('(more...)')); ?></section>
-
+    <div id="wrapperInstructor">
+      <div class="thumbnail"><?php the_post_thumbnail(); ?></div>
+      <header>
+          <h1 class="postTitle"><?php the_title(); ?></h1>
+      </header>
+      <img class="colorShapesBottomDos" src="<?php bloginfo('template_url'); ?>/images/colorShapesBottomDos.png" />
+      <div id="contentInstructor">
+      <section class="post"><?php the_content(); ?></section>
+      </div>
+      <img class="colorShapesRight" src="<?php bloginfo('template_url'); ?>/images/colorShapesRight.png" />
+    </div>
 	</article>
 
 	<?php
