@@ -45,18 +45,19 @@ $(document).ready(function(){
         $('.slideshow').cycle();
 
         $(".slideshow a").click(function(){
-        
-        $.ajaxSetup({cache:false});
-        var post_url = $(this).attr("href")+"?ajaxload=false";
-        var link_id = $(this).attr('id');
-        var divHeight = $(".loadingInstructor").height();
 
-        $(".instructorContainer").css("height", divHeight);
-        $(".loadingInstructor").fadeOut();
-        $(".loadingInstructor").load(post_url, function(){$(".loadingInstructor").fadeIn();});
+            $.ajaxSetup({cache:false});
+            var post_url = $(this).attr("href")+"?ajaxload=false";
+            var link_id = $(this).attr('id');
+            var divHeight = $(".loadingInstructor").height();
 
-        return false;
-    });
+            if(divHeight != 0)
+                $(".instructorContainer").css("height", divHeight);
+            $(".loadingInstructor").fadeOut();
+            $(".loadingInstructor").load(post_url, function(){$(".loadingInstructor").fadeIn();});
+
+            return false;
+        });
     }
     
 

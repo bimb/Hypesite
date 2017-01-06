@@ -18,6 +18,7 @@ if($ajaxload == false)
   <div class="instructorContainer">
     <div class="loadingInstructor"></div>
   </div>
+  <h1 class="postTitle">Instructores</h1>
   <div class="slideshowContainer">
     <div class="slideshow" 
     	data-cycle-log="false"

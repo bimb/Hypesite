@@ -90,9 +90,9 @@ div.responsive img { width: auto; height: auto }
     width: 40px;
 }
 .center a:last-child {float: right;transform: rotate(-90deg);}
-.instructorContainer {clear: both;margin-bottom: 150px;}
+.instructorContainer {clear: both;margin-bottom: 80px;}
 .slideshowContainer {clear: both; position: relative;}
-.loadingInstructor{display: none;}
+.loadingInstructor{display: none;margin-bottom: 80px;}
 
 /* 
     media queries 
