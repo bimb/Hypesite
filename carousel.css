@@ -98,7 +98,12 @@ div.responsive img { width: auto; height: auto }
     pointer-events: all;
 }
 .center a:last-child {float: right;transform: rotate(-90deg);}
-.instructorContainer {clear: both;margin-bottom: 80px;}
+.instructorContainer {clear: both; height: auto !important;}
+.instructorContainer:after {
+    content:"";
+    display:block;
+    clear:both;
+}
 .slideshowContainer {clear: both; position: relative;}
 .loadingInstructor{display: none;margin-bottom: 80px;}
 

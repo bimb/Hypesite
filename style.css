@@ -51,6 +51,22 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'BergenSans-SemiBold';
+  src: url('fonts/BergenSans-SemiBold.eot?#iefix') format('embedded-opentype'),  url('fonts/BergenSans-SemiBold.otf')  format('opentype'),
+       url('fonts/BergenSans-SemiBold.woff') format('woff'), url('fonts/BergenSans-SemiBold.ttf')  format('truetype'), url('fonts/BergenSans-SemiBold.svg#BergenSans-SemiBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BergenSans';
+  src: url('fonts/BergenSans.eot?#iefix') format('embedded-opentype'),  url('fonts/BergenSans.otf')  format('opentype'),
+       url('fonts/BergenSans.woff') format('woff'), url('fonts/BergenSans.ttf')  format('truetype'), url('fonts/BergenSans.svg#BergenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 
 /* general */
@@ -88,6 +104,7 @@ header#navegacion {
   text-align: center;
   top: 0;
   width: 100%;
+  height: 50px;
   z-index: 9999;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Chrome/Safari/Opera */
@@ -114,9 +131,9 @@ header#navegacion #logo img{
   
 header#navegacion #logo img.logoNegro{opacity:1;}
 header#navegacion #logo img.logoBlanco{opacity:0;}
-header#navegacion ul#menu-main-menu, header#navegacion ul#menu-main-menu li{list-style: none; position: relative;}
-header#navegacion ul#menu-main-menu li{cursor: pointer; float: none; font-size: 1.2em; padding-top:0;}
-header#navegacion ul#menu-main-menu li a{
+header#navegacion ul#menu-main-menu, header#navegacion ul#menu-main-menu-1 li{list-style: none; position: relative;}
+header#navegacion ul#menu-main-menu-1 li{cursor: pointer; float: none; font-size: 1.2em; padding-top:0;}
+header#navegacion ul#menu-main-menu-1 li a{
   color: #000;
   font-family: 'AvantGardeITCbyBT-Demi';
   font-size: 0.75em;
@@ -128,13 +145,13 @@ header#navegacion ul#menu-main-menu li a{
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;}
 
-header#navegacion ul#menu-main-menu li a:hover { color: #666; !important; text-decoration: none; }
+header#navegacion ul#menu-main-menu-1 li a:hover { color: #666; !important; text-decoration: none; }
 
 header#navegacion.darkHeader {
     background-color: rgba(0,0,0,.6);
 }
 
-header#navegacion.darkHeader ul#menu-main-menu li a {
+header#navegacion.darkHeader ul#menu-main-menu-1 li a {
     color: #fff;
 }
 
@@ -156,7 +173,7 @@ header#navegacion.darkHeader #logo img.logoBlanco{opacity:1;}
 
 div#mobileMenu {display: none;}
 
-ul#menu-main-menu {
+ul#menu-main-menu-1 {
     float: none;
     font-family: sans-serif;
     margin: 0px auto;
@@ -166,29 +183,35 @@ ul#menu-main-menu {
     width: 45%;
     height: 40px;
 }
-ul#menu-main-menu li{
+ul#menu-main-menu-1 li{
     display: inline-block;
     text-align: center;
     margin: 8px;
 }
-ul#menu-main-menu li:hover{color: #be00ff;}
+ul#menu-main-menu-1 li:hover{color: #be00ff;}
 
 #primaryContent {
   width:100%;
   float: none;
-  min-width: 1280px;
 }
 
-h1, h2, h3{font-family: 'AvantGardeITCbyBT-Demi'; position: relative; font-weight: normal; margin: 0; padding: 0}
+h1, h2, h3{font-family: 'BergenSans-SemiBold'; position: relative; font-weight: normal; margin: 0; padding: 0}
 
 h3.textoTitulo:after{border:none;}
 
 /**  Sections */
 
-section{box-sizing: border-box; padding:0px; display: table; width: 100%; position: relative;}
+section{box-sizing: border-box; padding:0px; width: 100%; position: relative;}
+
+section:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
 section h1 {
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 18px;
     margin: 10px 0;
     letter-spacing: -.5px;
 }
@@ -240,6 +263,7 @@ article.postWrapper:after {
 
 
 /* HOME */
+
 #home-inicio{height: 100vh;}
 #home-inicio {padding: 0;}
 #home-inicio article{position: relative; width: 100%; height: 100%; padding: 0;}
@@ -249,11 +273,18 @@ article.postWrapper:after {
     margin-left: 10%; 
     overflow: hidden;
     width: 66%;
+    position: relative;
 }
+
 #home-inicio .thumbnail img {
     width: auto;
     height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
+
 #home-inicio .leftImage {
   background-image: url(images/colorShapesLeft.png);
   background-repeat: no-repeat;
@@ -267,7 +298,7 @@ article.postWrapper:after {
 #home-inicio .postText {
     top: 15%;
     font-size: 6em;
-    font-family: 'AvantGardeITCbyBT-Demi';
+    font-family: 'BergenSans-SemiBold';
     right: 5%;
     position: absolute;
     width: 400px;
@@ -337,7 +368,7 @@ section.section-home#home-acerca-de {min-height: 550px;}
 #post-acerca-de section.postText {
     bottom: 15%;
     font-size: 4em;
-    font-family: 'AvantGardeITCbyBT-Demi';
+    font-family: 'BergenSans-SemiBold';
     left: 42%;
     position: absolute;
     width: 400px;
@@ -447,7 +478,7 @@ img.colorShapesEntrenamiento {
 #home-yoga section.postText {
     top: 15%;
     font-size: 5em;
-    font-family: 'AvantGardeITCbyBT-Demi';
+    font-family: 'BergenSans-SemiBold';
     right: 5%;
     position: absolute;
     width: 400px;
@@ -474,8 +505,11 @@ section#home-instructores h1 {
     margin: 0 auto;
     display: inherit;
     float: none;
-    border-top: 3px solid #000;
     padding: 5px 0px;
+}
+
+section#home-instructores h1:before {
+  background-color: #000;
 }
 
 /* INSTRUCTORES SINGLE */
@@ -565,6 +599,7 @@ section#home-horarios {
 }
 
 article#post-8 {
+    font-family: 'BergenSans';
     background-color: #000;
     color: #fff;
     padding: 0 50px;
@@ -617,10 +652,14 @@ article#post-8 h1:before {
 }
 
 span.fc-time {
+    font-family: 'BergenSans-SemiBold';
+    font-weight: normal !important;
     display: block;
 }
 
 span.fc-title {
+    font-family: 'BergenSans';
+    font-weight: normal !important;
     text-align: right;
     width: 100%;
     display: block;
@@ -668,6 +707,178 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
 
 @media only screen and (max-width : 729px) {
 
+}
+
+
+/* MENU MOBILE */
+
+.pushmenu { /*this is the nav*/
+  background: #000;
+  font-family: 'FreightSansMedium';
+  width: 300px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+  position:fixed;
+  padding: 20px 40px;
+  box-sizing: border-box;}
+
+.pushmenu ul{margin: 0; padding: 0; margin-top: 30px;}
+
+.pushmenu li{list-style: none;}
+
+.pushmenu a {
+  display: block; /* drops the nav vertically*/
+  color: #fff;
+  font-size: 19px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #fff;
+  padding:7px;}
+
+.pushmenu li ul li, .pushmenu a.expo{margin:0;}
+
+.pushmenu li ul li.secciones{font-family: 'FreightSansMedium'; color: #ceb76f;margin-top: 25px;}
+
+.pushmenu li ul {
+    margin:0;
+    margin-bottom: 20px;
+    padding-left: 4px;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;}
+
+.pushmenu li.active ul {max-height:300px; height:auto;}
+
+.pushmenu li ul li a {
+  display: block; /* drops the nav vertically*/
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom:0;
+  border-bottom:none;
+  padding: 2px;}
+
+.pushmenu a.equis img{width: 13px;height: 13px;}
+
+.pushmenu a.equis{
+    width: 100%;
+    height: 10px;
+    background-image: url("images/equis.svg");
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    padding:5px;
+    margin-top: 10px;}
+
+.pushmenu a:hover{
+  color: #ceb76f;
+  border-bottom: 1px solid #ceb76f;}
+
+.pushmenu li:hover, .pushmenu li:hover a, .pushmenu a:hover span.cruz{color: #ceb76f;}
+
+.pushmenu li:hover, .pushmenu li:hover a:hover li a, .pushmenu li:hover, .pushmenu li:hover ul li a{color:#fff;}
+
+.pushmenu li:hover, .pushmenu li:hover ul li a:hover{color: #ceb76f;}
+
+.pushmenu-left {
+  right: -300px;
+
+}
+
+.pushmenu-left.pushmenu-open {
+  right: 0;overflow-y: scroll;
+}
+
+.pushmenu-push {
+  overflow-x: hidden;
+  position: relative;
+  right: 0;
+}
+
+.pushmenu-push-toright {
+  right: 300px;
+}
+
+/*Transition*/
+.pushmenu, .pushmenu-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;  
+}
+
+#nav_list {
+  background: url(images/nav.png) no-repeat left top;
+  cursor: pointer;
+  height: 27px;
+  width: 33px;
+  text-indent: -99999em;
+  float: right;
+}
+
+#nav_list.active {
+    background: none;
+}
+
+.nav-list.active {
+  background-position: -33px top;
+}
+
+ .buttonset {
+    height: 16px;
+    padding: 10px 20px 20px;
+    position: absolute;
+    z-index: 1;
+    right: 30px;
+    top: 20px;
+    display: none;}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 900px) {
+    header#navegacion{position: initial;}
+    .menu-main-menu-container, #home-inicio ul, #home-inicio .downArrow, #post-acerca-de .thumbnail, #post-acerca-de section.postText, img.colorShapesEntrenamiento, #entrenamientoBloques, #home-yoga section.postText, img.colorShapesBottomDos, #home-yoga .imageHero{display: none;}
+    section.section-home#home-acerca-de, section.section-home {min-height: initial;}
+    #post-acerca-de section.post, #home-entrenamiento section.post, #home-yoga section.post {
+    float:left;
+    text-align:left;
+    min-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    }
+    #home-yoga section h1:before {left: 0px;}
+    th.fc-day-header {
+    text-align: center !important;
+    font-size: 1em;
+    }
+    .fc-toolbar.fc-header-toolbar {
+    border-bottom: 1px dotted #fff;
+    }
+    span.fc-time {
+    text-align: center;
+    }
+    span.fc-title {
+    text-align: center;
+    }
+    span.fc-title p {
+    display: none;
+    }
+    .fc-event, .fc-event-dot{width: 100%;}
+    .fc-event, .fc-event-dot {
+    margin: 0 !important;
+    margin-bottom: 10px !important;
+    padding-bottom: 5px !important;
+    }
+    .buttonset{
+        right: 0px;
+        top: 57px;
+        position: fixed;
+        z-index: 11;
+        display: block;}
 }
 
 

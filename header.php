@@ -56,7 +56,6 @@
     }
         });
     });
-
     </script>
         
     
@@ -66,13 +65,17 @@
   ?>
 </head>
 
-<body>
+<body class="pushmenu-push">
   <div id="canvas">
 <header id="navegacion">
     <div id="logo"><img class="logoNegro" src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="Hype Logo" /><img class="logoBlanco" src="<?php bloginfo('template_url'); ?>/images/logob.png" alt="Hype Logo" /></div>
-    <div id="mobileMenu">
-        <!-- Mobile Logo Here -->
-    </div>
+    <nav class="pushmenu pushmenu-left">
+    <a id="cerrarMenu" class="equis" href=""></a>
+    <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+    </nav>
+    <section class="buttonset">
+            <div id="nav_list">Menu</div>
+  </section>
     <!-- Main Logo Here -->
     <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 </header>
