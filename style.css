@@ -713,93 +713,59 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
 /* MENU MOBILE */
 
 .pushmenu { /*this is the nav*/
-  background: #000;
-  font-family: 'FreightSansMedium';
-  width: 300px;
-  height: 100%;
-  top: 0;
-  z-index: 1000;
-  position:fixed;
-  padding: 20px 40px;
-  box-sizing: border-box;}
+    background: #000;
+    font-family: 'BergenSans-SemiBold';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+    padding: 100px 100px;
+    box-sizing: border-box;}
 
 .pushmenu ul{margin: 0; padding: 0; margin-top: 30px;}
 
 .pushmenu li{list-style: none;}
 
 .pushmenu a {
-  display: block; /* drops the nav vertically*/
+  display: block;
   color: #fff;
   font-size: 19px;
   text-decoration: none;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #fff;
-  padding:7px;}
-
-.pushmenu li ul li, .pushmenu a.expo{margin:0;}
-
-.pushmenu li ul li.secciones{font-family: 'FreightSansMedium'; color: #ceb76f;margin-top: 25px;}
-
-.pushmenu li ul {
-    margin:0;
-    margin-bottom: 20px;
-    padding-left: 4px;
-    max-height: 0;
-    overflow: hidden;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;}
-
-.pushmenu li.active ul {max-height:300px; height:auto;}
-
-.pushmenu li ul li a {
-  display: block; /* drops the nav vertically*/
-  color: #fff;
-  font-size: 16px;
-  text-decoration: none;
-  margin-bottom:0;
-  border-bottom:none;
-  padding: 2px;}
+  padding: 7px;
+  text-align: left;
+  text-transform: lowercase;
+  font-size: 4em;}
 
 .pushmenu a.equis img{width: 13px;height: 13px;}
 
 .pushmenu a.equis{
     width: 100%;
-    height: 10px;
+    height: 25px;
     background-image: url("images/equis.svg");
-    background-size: 15px 15px;
+    background-position: 95%;
     background-repeat: no-repeat;
     padding:5px;
     margin-top: 10px;}
 
-.pushmenu a:hover{
-  color: #ceb76f;
-  border-bottom: 1px solid #ceb76f;}
-
-.pushmenu li:hover, .pushmenu li:hover a, .pushmenu a:hover span.cruz{color: #ceb76f;}
-
-.pushmenu li:hover, .pushmenu li:hover a:hover li a, .pushmenu li:hover, .pushmenu li:hover ul li a{color:#fff;}
-
-.pushmenu li:hover, .pushmenu li:hover ul li a:hover{color: #ceb76f;}
+.pushmenu a:hover{}
 
 .pushmenu-left {
-  right: -300px;
-
+  left: -100%;
 }
 
 .pushmenu-left.pushmenu-open {
-  right: 0;overflow-y: scroll;
+  left: 0;overflow-y: scroll;
 }
 
 .pushmenu-push {
   overflow-x: hidden;
   position: relative;
-  right: 0;
+  left: 0;
 }
 
 .pushmenu-push-toright {
-  right: 300px;
+  left: 100%;
 }
 
 /*Transition*/
@@ -838,7 +804,7 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
 
 @media only screen and (max-width: 900px) {
     header#navegacion{position: initial;}
-    #menu-main-menu-1, #home-inicio ul, #home-inicio .downArrow, #post-acerca-de .thumbnail, #post-acerca-de section.postText, img.colorShapesEntrenamiento, #entrenamientoBloques, #home-yoga section.postText, img.colorShapesBottomDos, #home-yoga .imageHero{display: none;}
+    #menu-main-menu, #home-inicio ul, #home-inicio .downArrow, #post-acerca-de .thumbnail, #post-acerca-de section.postText, img.colorShapesEntrenamiento, #entrenamientoBloques, #home-yoga section.postText, img.colorShapesBottomDos, #home-yoga .imageHero{display: none;}
     section.section-home#home-acerca-de, section.section-home {min-height: initial;}
     #post-acerca-de section.post, #home-entrenamiento section.post, #home-yoga section.post {
     float:left;
