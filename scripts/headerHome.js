@@ -17,7 +17,6 @@ $(document).ready(function(){
     
     $.ajaxSetup({cache:false});
     
-    //$("#home-inicio").load(post_url0, function(){ $('.cycle-slideshow').cycle();});
     $("#home-inicio").load(post_url0, arrowSlide);
     $("#home-acerca-de").load(post_url1);
     $("#home-horarios").load(post_url2);
@@ -76,10 +75,10 @@ $(document).ready(function(){
     $(".menu-main-menu-container ul#menu-main-menu li a").click(function() {
                              
         var theId = $(this).parent().attr('id');
-        //console.log('ID: '+theId);
+        console.log('ID: '+theId);
         switch(theId){
         case "menu-item-17"://Acerca de
-            $("html, body").animate({ scrollTop: $('#home-acerca-de').offset().top }, 1000);
+            $("html, body").animate({ scrollTop: $('#home-acerca-de').offset().top }, 1000);console.log('ACERC DE');
             if ($(window).width() < 729) 
                 $('ul#menu-main-menu').fadeOut(); 
         break;

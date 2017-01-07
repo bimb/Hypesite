@@ -132,8 +132,8 @@ header#navegacion #logo img{
 header#navegacion #logo img.logoNegro{opacity:1;}
 header#navegacion #logo img.logoBlanco{opacity:0;}
 header#navegacion ul#menu-main-menu, header#navegacion ul#menu-main-menu-1 li{list-style: none; position: relative;}
-header#navegacion ul#menu-main-menu-1 li{cursor: pointer; float: none; font-size: 1.2em; padding-top:0;}
-header#navegacion ul#menu-main-menu-1 li a{
+header#navegacion ul#menu-main-menu li{cursor: pointer; float: none; font-size: 1.2em; padding-top:0;}
+header#navegacion ul#menu-main-menu li a{
   color: #000;
   font-family: 'AvantGardeITCbyBT-Demi';
   font-size: 0.75em;
@@ -145,7 +145,7 @@ header#navegacion ul#menu-main-menu-1 li a{
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;}
 
-header#navegacion ul#menu-main-menu-1 li a:hover { color: #666; !important; text-decoration: none; }
+header#navegacion ul#menu-main-menu li a:hover { color: #666; !important; text-decoration: none; }
 
 header#navegacion.darkHeader {
     background-color: rgba(0,0,0,.6);
@@ -173,7 +173,7 @@ header#navegacion.darkHeader #logo img.logoBlanco{opacity:1;}
 
 div#mobileMenu {display: none;}
 
-ul#menu-main-menu-1 {
+ul#menu-main-menu {
     float: none;
     font-family: sans-serif;
     margin: 0px auto;
@@ -183,12 +183,12 @@ ul#menu-main-menu-1 {
     width: 45%;
     height: 40px;
 }
-ul#menu-main-menu-1 li{
+ul#menu-main-menu li{
     display: inline-block;
     text-align: center;
     margin: 8px;
 }
-ul#menu-main-menu-1 li:hover{color: #be00ff;}
+ul#menu-main-menu li:hover{color: #be00ff;}
 
 #primaryContent {
   width:100%;
@@ -829,17 +829,16 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
  .buttonset {
     height: 16px;
     padding: 10px 20px 20px;
-    position: absolute;
     z-index: 1;
-    right: 30px;
-    top: 20px;
+    right: 0px;
+    top: 0px;
     display: none;}
 
 /* RESPONSIVE */
 
 @media only screen and (max-width: 900px) {
     header#navegacion{position: initial;}
-    .menu-main-menu-container, #home-inicio ul, #home-inicio .downArrow, #post-acerca-de .thumbnail, #post-acerca-de section.postText, img.colorShapesEntrenamiento, #entrenamientoBloques, #home-yoga section.postText, img.colorShapesBottomDos, #home-yoga .imageHero{display: none;}
+    #menu-main-menu-1, #home-inicio ul, #home-inicio .downArrow, #post-acerca-de .thumbnail, #post-acerca-de section.postText, img.colorShapesEntrenamiento, #entrenamientoBloques, #home-yoga section.postText, img.colorShapesBottomDos, #home-yoga .imageHero{display: none;}
     section.section-home#home-acerca-de, section.section-home {min-height: initial;}
     #post-acerca-de section.post, #home-entrenamiento section.post, #home-yoga section.post {
     float:left;
@@ -873,12 +872,7 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
     margin-bottom: 10px !important;
     padding-bottom: 5px !important;
     }
-    .buttonset{
-        right: 0px;
-        top: 57px;
-        position: fixed;
-        z-index: 11;
-        display: block;}
+    .buttonset{display: block;}
 }
 
 
