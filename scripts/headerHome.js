@@ -27,7 +27,7 @@ $(document).ready(function(){
     $("#home-instructores").load(post_url7, ajaxLoadInstructores);
     
     
-    $("ul#menu-main-menu li a").removeAttr("href");
+    $("ul#menu-main-menu li a, .pushmenu ul.menu li a").removeAttr("href");
     
     $("#logo").click(function() {
         $("html, body").animate({ scrollTop: $('#home-inicio').offset().top }, 1000);
@@ -35,7 +35,6 @@ $(document).ready(function(){
     
     function arrowSlide(){
         $("#home-inicio .downArrow").click(function() {
-        console.log('HI!!');
         $("html, body").animate({ scrollTop: $('#home-acerca-de').offset().top }, 1000);
         });
     }
@@ -75,36 +74,71 @@ $(document).ready(function(){
     $(".menu-main-menu-container ul#menu-main-menu li a").click(function() {
                              
         var theId = $(this).parent().attr('id');
-        console.log('ID: '+theId);
         switch(theId){
         case "menu-item-17"://Acerca de
-            $("html, body").animate({ scrollTop: $('#home-acerca-de').offset().top }, 1000);console.log('ACERC DE');
+            $("html, body").animate({ scrollTop: $('#home-acerca-de').offset().top - 50}, 1000);
             if ($(window).width() < 729) 
                 $('ul#menu-main-menu').fadeOut(); 
         break;
         case "menu-item-169"://Instructores
-            $("html, body").animate({ scrollTop: $('#home-instructores').offset().top }, 1000);
+            $("html, body").animate({ scrollTop: $('#home-instructores').offset().top - 90}, 1000);
             if ($(window).width() < 729) 
                 $('ul#menu-main-menu').fadeOut(); 
         break;
         case "menu-item-16"://Horarios
-            $("html, body").animate({ scrollTop: $('#home-horarios').offset().top }, 1000);
+            $("html, body").animate({ scrollTop: $('#home-horarios').offset().top - 50}, 1000);
             if ($(window).width() < 729) 
                 $('ul#menu-main-menu').fadeOut(); 
         break;
         case "menu-item-14"://Reservar
-            $("html, body").animate({ scrollTop: $('#home-reservar').offset().top }, 1000);
+            $("html, body").animate({ scrollTop: $('#home-reservar').offset().top - 50}, 1000);
             if ($(window).width() < 729) 
                 $('ul#menu-main-menu').fadeOut(); 
         break;
         case "menu-item-15"://Contacto
-            $("html, body").animate({ scrollTop: $('#home-contacto').offset().top }, 1000);
+            $("html, body").animate({ scrollTop: $('#home-contacto').offset().top - 50}, 1000);
             if ($(window).width() < 729) 
             	$('ul#menu-main-menu').fadeOut(); 
         break;
         }
 
         $("ul#menu-main-menu li").removeClass("current-menu-item");
+        $(this).parent().addClass("current-menu-item");
+         
+    });
+
+    $(".pushmenu ul.menu li a").click(function() {
+                             
+        var theId = $(this).parent().attr('class');
+        switch(theId){
+        case "menu-item menu-item-type-post_type menu-item-object-page menu-item-17"://Acerca de
+            $("html, body").animate({ scrollTop: $('#home-acerca-de').offset().top - 50 }, 1000);
+            if ($(window).width() < 729) 
+                $('ul#menu-main-menu').fadeOut(); 
+        break;
+        case "menu-item menu-item-type-taxonomy menu-item-object-category menu-item-169"://Instructores
+            $("html, body").animate({ scrollTop: $('#home-instructores').offset().top - 70}, 1000);
+            if ($(window).width() < 729) 
+                $('ul#menu-main-menu').fadeOut(); 
+        break;
+        case "menu-item menu-item-type-post_type menu-item-object-page menu-item-16"://Horarios
+            $("html, body").animate({ scrollTop: $('#home-horarios').offset().top - 50}, 1000);
+            if ($(window).width() < 729) 
+                $('ul#menu-main-menu').fadeOut(); 
+        break;
+        case "menu-item menu-item-type-post_type menu-item-object-page menu-item-14"://Reservar
+            $("html, body").animate({ scrollTop: $('#home-reservar').offset().top - 50}, 1000);
+            if ($(window).width() < 729) 
+                $('ul#menu-main-menu').fadeOut(); 
+        break;
+        case "menu-item menu-item-type-post_type menu-item-object-page menu-item-15"://Contacto
+            $("html, body").animate({ scrollTop: $('#home-contacto').offset().top - 50}, 1000);
+            if ($(window).width() < 729) 
+                $('ul#menu-main-menu').fadeOut(); 
+        break;
+        }
+
+        $(".pushmenu ul.menu li").removeClass("current-menu-item");
         $(this).parent().addClass("current-menu-item");
          
     });
@@ -136,7 +170,7 @@ $(document).ready(function(){
     });
 
     $menuLeft = $('.pushmenu-left');
-    $nav_list = $('#nav_list');
+    $nav_list = $('#nav_list,.pushmenu ul.menu li a');
     $cruz_list = $('#cerrarMenu');   
 
     $nav_list.click(function() {

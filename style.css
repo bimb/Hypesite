@@ -151,7 +151,7 @@ header#navegacion.darkHeader {
     background-color: rgba(0,0,0,.6);
 }
 
-header#navegacion.darkHeader ul#menu-main-menu-1 li a {
+header#navegacion.darkHeader ul#menu-main-menu li a {
     color: #fff;
 }
 
@@ -735,7 +735,7 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
   padding: 7px;
   text-align: left;
   text-transform: lowercase;
-  font-size: 4em;}
+  font-size: 3em;}
 
 .pushmenu a.equis img{width: 13px;height: 13px;}
 
@@ -759,7 +759,6 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
 }
 
 .pushmenu-push {
-  overflow-x: hidden;
   position: relative;
   left: 0;
 }
@@ -784,10 +783,6 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
   float: right;
 }
 
-#nav_list.active {
-    background: none;
-}
-
 .nav-list.active {
   background-position: -33px top;
 }
@@ -803,7 +798,6 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
 /* RESPONSIVE */
 
 @media only screen and (max-width: 900px) {
-    header#navegacion{position: initial;}
     #menu-main-menu, #home-inicio ul, #home-inicio .downArrow, #post-acerca-de .thumbnail, #post-acerca-de section.postText, img.colorShapesEntrenamiento, #entrenamientoBloques, #home-yoga section.postText, img.colorShapesBottomDos, #home-yoga .imageHero{display: none;}
     section.section-home#home-acerca-de, section.section-home {min-height: initial;}
     #post-acerca-de section.post, #home-entrenamiento section.post, #home-yoga section.post {
