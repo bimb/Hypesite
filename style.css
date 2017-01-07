@@ -291,16 +291,18 @@ article.postWrapper:after {
   background-size: 100%;
   position: absolute;
   left: 0;
-  bottom: 15%;
-  height: 10%;
-  width: 10%;
+  bottom: 17%;
+  height: 12%;
+  width: 14%;
 }
+#post-acerca-de p {margin: 5px 0px 0px 0px;}
 #home-inicio .postText {
-    top: 15%;
     font-size: 6em;
     font-family: 'BergenSans-SemiBold';
+    line-height: 0.9em;
     right: 5%;
     position: absolute;
+    top: 15%;
     width: 400px;
     z-index: 10;
 }
@@ -352,7 +354,7 @@ section.section-home#home-acerca-de {min-height: 550px;}
     margin-right: 30px;
     position: absolute;
     right: 0;
-    width: 38%;
+    width: 42%;
     z-index: 9;
 }
 #post-acerca-de .thumbnail img {height: auto;width: 100%;}
