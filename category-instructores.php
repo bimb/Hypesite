@@ -33,7 +33,7 @@ if($ajaxload == false)
 
 	<div>
 		<a href="<?php the_permalink(); ?>">
-		<?php if ( has_post_thumbnail() )the_post_thumbnail(); ?>
+		<?php if ( has_post_thumbnail() )the_post_thumbnail('medium'); ?>
 		<div class="name"><?php the_title(); ?></div>
 		</a>
 	</div>

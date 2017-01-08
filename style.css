@@ -372,6 +372,7 @@ section.section-home#home-acerca-de {min-height: 550px;}
     font-size: 4em;
     font-family: 'BergenSans-SemiBold';
     left: 42%;
+    line-height: 0.9em;
     position: absolute;
     width: 400px;
     z-index: 10;
@@ -478,11 +479,12 @@ img.colorShapesEntrenamiento {
 }
 
 #home-yoga section.postText {
-    top: 15%;
     font-size: 5em;
     font-family: 'BergenSans-SemiBold';
-    right: 5%;
+    line-height: 0.9em;
     position: absolute;
+    right: 5%;
+    top: 15%;
     width: 400px;
     z-index: 10;
 }
