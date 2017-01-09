@@ -17,7 +17,7 @@ if($ajaxload == false)
   if(is_user_logged_in()){
   ?>
 
-	<article class="postWrapper" id="post-<?php the_ID(); ?>">
+	<article class="postWrapper" id="post-clases">
             
             <div id="tumbnail">
                 <?php 
@@ -25,20 +25,8 @@ if($ajaxload == false)
                         the_post_thumbnail(); 
                 ?>
             </div>
-                
-		<header>
-                    <?php 
-                    $textoTitulo = get_post_meta($post->ID, 'textoTitulo', true);
-                    
-                    if($textoTitulo){?>
-                        <h3 class="textoTitulo"><?php echo $textoTitulo;?></h3>
-                    <?php } ?>
-
-		    <h1 class="postTitle"><?php the_title(); ?></h1>
-
-		</header>
       
-		<section class="post"><?php the_content(__('(more...)')); ?>CLASES CLASES CLASES</section>
+		<section class="post"><?php the_content(__('(more...)')); ?></section>
 		
 
     </article>
