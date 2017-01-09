@@ -870,7 +870,10 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
     }
     #home-inicio .leftImage{
     left: 0;
-	top: 17%;}
+	top: 17%;
+	width: 20%;
+
+}
     article#post-8{padding: 0 10px;}
 
 }
