@@ -718,14 +718,14 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
 
 .pushmenu { /*this is the nav*/
     background: #000;
-    font-family: 'BergenSans-SemiBold';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    z-index: 1000;
-    position: fixed;
-    padding: 100px 100px;
-    box-sizing: border-box;}
+	font-family: 'BergenSans-SemiBold';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+	position: fixed;
+	padding: 100px 0px;
+	box-sizing: border-box;}
 
 .pushmenu ul{margin: 0; padding: 0; margin-top: 30px;}
 
@@ -744,7 +744,7 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
 .pushmenu a.equis img{width: 13px;height: 13px;}
 
 .pushmenu a.equis{
-    width: 100%;
+    width: 70%;
     height: 25px;
     background-image: url("images/equis.svg");
     background-position: 95%;
@@ -816,16 +816,18 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
     #home-yoga section h1:before {left: 0px;}
     th.fc-day-header {
     text-align: center !important;
-    font-size: 1em;
+    font-size: .5em;
     }
     .fc-toolbar.fc-header-toolbar {
     border-bottom: 1px dotted #fff;
     }
     span.fc-time {
     text-align: center;
+    font-size: .7em !important;
     }
     span.fc-title {
     text-align: center;
+    font-size: .4em !important;
     }
     span.fc-title p {
     display: none;
@@ -837,6 +839,17 @@ section#home-footer ul li{ display: inline-block; float: none; width: 33%; }
     padding-bottom: 5px !important;
     }
     .buttonset{display: block;}
+    #home-inicio .postText{
+	font-size: 3em;
+	right: 0;
+	top: 15%;
+	width: 40%;
+    }
+    #home-inicio .leftImage{
+    left: 0;
+	top: 17%;}
+    article#post-8{padding: 0 10px;}
+
 }
 
 
