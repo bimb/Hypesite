@@ -713,6 +713,7 @@ span.fc-title p {
     padding: 0;
     margin: 0;
     font-family: 'DINPro-Regular';
+    font-weight: normal;
     text-transform: uppercase;
 }
 
@@ -733,6 +734,10 @@ ul#clasesLogReg li {
     float: none !important;
     text-align: center;
 }
+#wp-registration-box p input, 
+#loginform input{border: 2px solid #000;font-family: 'DINPro-Regular';}
+#wp-registration-box p input{width: 35% !important;}
+p.submit input,
 .wpregistration-save-button input {
     border: 2px solid #000;
     background-color: #fff;
@@ -740,6 +745,9 @@ ul#clasesLogReg li {
     font-size: 1.3em;
     text-transform: uppercase;
 }
+#nm-saving-form-meta {margin: 0 auto;text-align: center;display: block;}
+
+    
 
 /* CONTACTO */
 section#home-contacto, section#home-footer{min-height: auto;}
