@@ -10,7 +10,7 @@ if(isset($_GET['ajaxload']))
 if($ajaxload == false)
     get_header();
 ?>
-
+<div id="single-post-container"></div>
 <section class="section-home" id="home-inicio"></section>
 <section class="section-home" id="home-acerca-de"></section>
 <section class="section-home" id="home-entrenamiento"></section>
@@ -32,6 +32,8 @@ if($ajaxload == false)
 		</li>
 	</ul>
 </section>
+
+
 
 
 

@@ -82,7 +82,7 @@ div.responsive img { width: auto; height: auto }
     width: 100%;
     z-index: 2; 
 }
-.center {height: 40px;position: absolute;top: 40%;width: 100%;z-index: 999; pointer-events: none;}
+.center {height: 40px;position: absolute;top: 40%;width: 100%;z-index: 998; pointer-events: none;}
 .center a {
     background-color: #fff;
     background-image: url(http://frutabomba.com.mx/tests/hype/wp-content/themes/Hype/images/arrow.png);

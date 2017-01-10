@@ -49,6 +49,14 @@
         eventRender: function(event, element) { 
             element.find('.fc-title').append("<br/><p>" + event.description +"</p>");
             element.attr("href", "http://frutabomba.com.mx/tests/hype/"+ event.location);
+            element.click(function(){
+        
+                $.ajaxSetup({cache:false});
+                var post_url = $(this).attr("href")+"?ajaxload=false";
+                //console.log('URL:'+post_url);
+                $("#single-post-container").hide().load(post_url, function(){$(this).fadeIn();});
+                return false;
+            });
         },
         });
     });

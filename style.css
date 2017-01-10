@@ -692,7 +692,21 @@ span.fc-title p {
 *:focus {outline:0;}
 
 /* RESERVAR / CLASES */
-#post-clases{margin-top: 50px; text-align: center;}
+#post-clases{
+  margin-top: 50px;
+  text-align: center;
+  position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    background-color: rgba(255,255,255,1);
+    opacity: 1;
+    transition: all 0.5s;
+    z-index: 999;
+    pointer-events:auto;
+}
 #post-clases p.imgClass {
     text-align: center;
     display: inline-block;
@@ -716,6 +730,12 @@ span.fc-title p {
     font-family: 'DINPro-Regular';
     font-weight: normal;
     text-transform: uppercase;
+}
+#cerrar {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    z-index: 999;
 }
 
 ul#clasesLogReg{cursor: pointer; margin: 0; padding: 0; list-style: none; text-transform: uppercase;}

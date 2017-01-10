@@ -18,24 +18,32 @@ if($ajaxload == false)
   ?>
 
 	<article class="postWrapper" id="post-clases">
-            
-            <div id="tumbnail">
-                <?php 
-                    if ( has_post_thumbnail() ) 
-                        the_post_thumbnail(); 
-                ?>
-            </div>
+      <div id="cerrar">CERRAR</div>
+      <div id="tumbnail">
+          <?php 
+              if ( has_post_thumbnail() ) 
+                  the_post_thumbnail(); 
+          ?>
+      </div>
       
-		<section class="post"><?php the_content(__('(more...)')); ?></section>
+		  <section class="post"><?php the_content(__('(more...)')); ?></section>
 		
 
     </article>
 
+    <script type="text/javascript">
+    $('#cerrar').click(function(){
+      $('#post-clases').fadeOut(1000, function(){
+          $(this).remove();
+      });
+    });
+    </script>
   <?php
 
   }else{ ?>
 
   <article class="postWrapper" id="post-clases">
+    <div id="cerrar">CERRAR</div>
     <h2>Login / Registrar</h2>
     <p>Por favor regístrate o inicia sesión para continuar</p>
     <ul id="clasesLogReg">
@@ -46,6 +54,7 @@ if($ajaxload == false)
     <div id="clasesRegister" style="display: none;"><?php echo do_shortcode( '[nm-wp-registration]' ); ?></div>
   </article>
   <script type="text/javascript">
+
     $('ul#clasesLogReg li:first-child,#loginReg').click(function(){
       $('ul#clasesLogReg li').removeClass();
       $(this).addClass('clasesSelected');
@@ -58,6 +67,12 @@ if($ajaxload == false)
       $(this).addClass('clasesSelected');
       $('#clasesLogin').fadeOut(function() {
         $('#clasesRegister').fadeIn();
+      });
+    });
+
+    $('#cerrar').click(function(){
+      $('#post-clases').fadeOut(1000, function(){
+          $(this).remove();
       });
     });
   </script>
