@@ -48,13 +48,8 @@
         dayOfMonthFormat: 'dddd DD',
         eventRender: function(event, element) { 
             element.find('.fc-title').append("<br/><p>" + event.description +"</p>");
-            element.find('.fc-content').attr("data-link", "http://frutabomba.com.mx/tests/hype/"+ event.location);
+            element.attr("href", "http://frutabomba.com.mx/tests/hype/"+ event.location);
         },
-        eventClick: function(event) {
-        if (event.url) {
-            return false;
-            }
-        }
         });
     });
     </script>
