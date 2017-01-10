@@ -31,7 +31,7 @@
     <script src='<?php bloginfo('template_url'); ?>/scripts/locale/es.js'></script>
     <script>
 
-    $( document ).ajaxComplete(function() {
+     $(document).bind('ready ajaxComplete', function(){
     $('#calendar').fullCalendar({
         header: {
                 left: 'title',
@@ -47,13 +47,14 @@
         timeFormat: 'h:mm A',
         dayOfMonthFormat: 'dddd DD',
         eventRender: function(event, element) { 
-            element.find('.fc-title').append("<br/><p>" + event.description +"</p>"); 
+            element.find('.fc-title').append("<br/><p>" + event.description +"</p>");
+            element.find('.fc-content').attr("data-link", "http://frutabomba.com.mx/tests/hype/"+ event.location);
         },
         eventClick: function(event) {
         if (event.url) {
             return false;
+            }
         }
-    }
         });
     });
     </script>
