@@ -10,7 +10,7 @@ if(isset($_GET['ajaxload']))
     $ajaxload = $_GET['ajaxload'];
 
 if($ajaxload == false)
-    get_header();
+    get_header('clases');
 
   if (have_posts()) : while (have_posts()) : the_post();
 
@@ -46,7 +46,7 @@ if($ajaxload == false)
     <div id="clasesRegister" style="display: none;"><?php echo do_shortcode( '[nm-wp-registration]' ); ?></div>
   </article>
   <script type="text/javascript">
-    $('ul#clasesLogReg li:first-child').click(function(){
+    $('ul#clasesLogReg li:first-child,#loginReg').click(function(){
       $('ul#clasesLogReg li').removeClass();
       $(this).addClass('clasesSelected');
       $('#clasesRegister').fadeOut(function() {
