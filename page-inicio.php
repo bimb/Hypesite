@@ -17,11 +17,30 @@ if($ajaxload == false)
 
 	<article class="postWrapper" id="post-inicio">
             
-            <div class="thumbnail">
+            <!--div class="thumbnail">
                 <?php 
                     if ( has_post_thumbnail() ) 
                         the_post_thumbnail(); 
                 ?>
+            </div>
+            <section class="postText">
+              <?php 
+              $copyText = get_post_meta( get_the_ID(), 'copy_text', true );
+              if ( ! empty( $copyText ) ) echo $copyText;
+              ?>
+            </section-->
+            <div class="slideshowContainerIndex">
+              <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="5000" data-cycle-speed="1000" data-cycle-slides="> div">
+
+                          <?php 
+                            if ($images = aldenta_get_images()) { 
+                            // IN PAGE
+                                foreach ($images as $image) 
+                                  echo '<div class="homeBgImg" style="background:url('.wp_get_attachment_url($image->ID).') no-repeat center center;">
+                                        </div>';
+                            }
+                          ?>
+              </div>
             </div>
             <section class="postText">
               <?php 

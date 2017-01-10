@@ -34,6 +34,7 @@ $(document).ready(function(){
     });
     
     function arrowSlide(){
+        $('.cycle-slideshow').cycle();
         $("#home-inicio .downArrow").click(function() {
         $("html, body").animate({ scrollTop: $('#home-acerca-de').offset().top }, 1000);
         });

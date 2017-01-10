@@ -292,8 +292,9 @@ article.postWrapper:after {
   position: absolute;
   left: 0;
   bottom: 17%;
-  height: 12%;
+  height: 22%;
   width: 14%;
+  z-index: 999;
 }
 #post-acerca-de p {margin: 5px 0px 0px 0px;}
 #home-inicio .postText {
@@ -304,7 +305,7 @@ article.postWrapper:after {
     position: absolute;
     top: 15%;
     width: 400px;
-    z-index: 10;
+    z-index: 999;
 }
 #home-inicio ul{
     margin: 0;

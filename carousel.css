@@ -105,7 +105,27 @@ div.responsive img { width: auto; height: auto }
     clear:both;
 }
 .slideshowContainer {clear: both; position: relative;}
+.slideshowContainerIndex {clear: both; position: relative;height: 80vh;}
 .loadingInstructor{display: none;margin-bottom: 80px;}
+
+/* CAROUSE HOME*/
+#home-inicio .cycle-slide{width: 100%;}
+#home-inicio .cycle-slide img{height: auto; width: 100%;}
+#home-inicio .cycle-slide.homeBgImg{
+    height: 80vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+}
+#home-inicio .cycle-slideshow{height: 80vh; max-width: 100%; width: 100%;}
 
 /* 
     media queries 
