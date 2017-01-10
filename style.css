@@ -716,6 +716,15 @@ span.fc-title p {
     text-transform: uppercase;
 }
 
+ul#clasesLogReg{cursor: pointer; margin: 0; padding: 0; list-style: none; text-transform: uppercase;}
+ul#clasesLogReg li {
+    display: inline-block;
+    margin: 0px 15px;
+    padding: 5px;
+}
+.clasesSelected{background-color: #000; color: #fff}
+
+
 /* CONTACTO */
 section#home-contacto, section#home-footer{min-height: auto;}
 section#home-contacto h1 {

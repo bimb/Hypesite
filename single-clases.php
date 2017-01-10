@@ -33,15 +33,38 @@ if($ajaxload == false)
 
   <?php
 
-  }else{ 
+  }else{ ?>
 
-  echo "<br><br><br><br><br>";
-echo do_shortcode( '[nm-wp-login]' );
-echo do_shortcode( '[nm-wp-registration]' );
-
+  <article class="postWrapper" id="post-clases">
+    <h2>Login / Registrar</h2>
+    <p>Por favor regístrate o inicia sesión para continuar</p>
+    <ul id="clasesLogReg">
+      <li class="clasesSelected">Login</li>
+      <li>Registro</li>
+    </ul>
+    <div id="clasesLogin"><?php echo do_shortcode( '[nm-wp-login]' ); ?></div>
+    <div id="clasesRegister" style="display: none;"><?php echo do_shortcode( '[nm-wp-registration]' ); ?></div>
+  </article>
+  <script type="text/javascript">
+    $('ul#clasesLogReg li:first-child').click(function(){
+      $('ul#clasesLogReg li').removeClass();
+      $(this).addClass('clasesSelected');
+      $('#clasesRegister').fadeOut(function() {
+        $('#clasesLogin').fadeIn();
+      });
+    });
+    $('ul#clasesLogReg li:last-child').click(function(){
+      $('ul#clasesLogReg li').removeClass();
+      $(this).addClass('clasesSelected');
+      $('#clasesLogin').fadeOut(function() {
+        $('#clasesRegister').fadeIn();
+      });
+    });
+  </script>
+  <?php
   }  
 
-  endwhile;  
+   endwhile;  
   endif;
 
   if($ajaxload == false)get_footer(); 
