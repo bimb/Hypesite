@@ -359,13 +359,14 @@ section.section-home#home-acerca-de {min-height: 550px;}
 }
 #post-acerca-de .thumbnail img {height: auto;width: 100%;}
 #post-acerca-de .thumbnail .bottomImage {
-  background-image: url('images/colorShapesBottom.png');
-  background-repeat: no-repeat;
-  bottom: -100px;
-  height: 200px;
-  position: absolute;
-  right: 15%;
-  width: 100px;
+    background-image: url(images/colorShapesBottom.png);
+    background-repeat: no-repeat;
+    bottom: -100px;
+    height: 200px;
+    position: absolute;
+    right: 15%;
+    width: 10%;
+    background-size: 100%;
 }
 #post-acerca-de section.postText {
     bottom: 15%;
