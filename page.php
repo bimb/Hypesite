@@ -10,7 +10,7 @@ if(isset($_GET['ajaxload']))
     $ajaxload = $_GET['ajaxload'];
 
 if($ajaxload == false)
-    get_header();
+    get_header('clases');
 
   if (have_posts()) : while (have_posts()) : the_post();
   ?>
