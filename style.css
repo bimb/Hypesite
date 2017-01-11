@@ -784,11 +784,12 @@ section#home-contacto h1 {
   text-align: center;
 }
 
-.redesSociales{text-align: center margin: 50px 0;}
+.redesSociales{text-align: center; margin: 50px 0;}
 .redesSociales a {
     display: inline-block;
     margin-right: 30px;
     position: relative;
+    width: 30px;
 }
 
 .redesSociales a img {
