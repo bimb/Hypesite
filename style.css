@@ -211,7 +211,7 @@ section:after {
 
 section h1 {
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 20px;
     margin: 10px 0;
     letter-spacing: -.5px;
 }
@@ -493,7 +493,7 @@ img.colorShapesEntrenamiento {
     
 img.colorShapesBottomDos {
     position: absolute;
-    width: 50px;
+    width: 60px;
     margin: -5% 0 0 20%;
     z-index: 10;
 }
@@ -773,6 +773,7 @@ p.submit input,
 
 /* CONTACTO */
 section#home-contacto, section#home-footer{min-height: auto;}
+
 section#home-contacto h1 {
   border-top: 3px solid #000;
   display: table;
@@ -782,6 +783,16 @@ section#home-contacto h1 {
   text-align: center;
 }
 
+.redesSociales{text-align: center margin: 50px 0;}
+.redesSociales a {
+    display: inline-block;
+    margin-right: 30px;
+    position: relative;
+}
+
+.redesSociales a img {
+    width: 100%;
+}
 /* FOOTER */
 section#home-footer {background-color: #000; color: #fff; text-align: center;}
 section#home-footer ul{ display: inline-block; list-style: none; margin: 0; padding: 10px 0; width: 100%;}
@@ -934,4 +945,7 @@ section#home-footer ul li{ display: inline-block; float: none; }
 }
 
 
+@media only screen and (min-width: 2000px) {
+  #home-inicio .postText, #post-acerca-de section.postText, #home-yoga section.postText{font-size: 8em;}
 
+}
