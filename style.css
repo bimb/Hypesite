@@ -793,6 +793,11 @@ section#home-contacto h1 {
 .redesSociales a img {
     width: 100%;
 }
+
+.redesSociales a:last-child {
+    margin-right: 0;
+}
+
 /* FOOTER */
 section#home-footer {background-color: #000; color: #fff; text-align: center;}
 section#home-footer ul{ display: inline-block; list-style: none; margin: 0; padding: 10px 0; width: 100%;}
