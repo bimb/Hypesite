@@ -355,7 +355,7 @@ section.section-home#home-acerca-de {min-height: 550px;}
     margin-right: 30px;
     position: absolute;
     right: 0;
-    width: 42%;
+    width: 37%;
     z-index: 9;
 }
 #post-acerca-de .thumbnail img {height: auto;width: 100%;}
@@ -373,7 +373,7 @@ section.section-home#home-acerca-de {min-height: 550px;}
     bottom: 15%;
     font-size: 5em;
     font-family: 'BergenSans-SemiBold';
-    left: 42%;
+    right: 25%;
     line-height: 0.9em;
     position: absolute;
     width: 400px;

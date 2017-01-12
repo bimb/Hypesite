@@ -48,7 +48,8 @@
         dayOfMonthFormat: 'dddd DD',
         eventRender: function(event, element) { 
             element.find('.fc-title').append("<br/><p>" + event.description +"</p>");
-            element.attr("href", "http://frutabomba.com.mx/tests/hype/"+ event.location);
+            //element.attr("href", "http://hypetraining.mx/"+ event.location);
+            element.attr("href", "");
             element.click(function(){
         
                 $.ajaxSetup({cache:false});
@@ -67,6 +68,7 @@
     wp_get_archives('type=monthly&format=link');
     wp_head();
   ?>
+  <meta name="google-site-verification" content="oqKzuz9ISykqj3Vn9GbFedaXE9_IFSf27f3xeaR5uog" />
 </head>
 
 <body class="pushmenu-push">
