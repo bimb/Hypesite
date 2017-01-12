@@ -65,7 +65,7 @@
 .slideshow { margin: auto }
 .slideshow a {display: inline-block;height: 200px;position: relative;vertical-align: text-bottom;}
 .slideshow a:hover > .name {display: block;}
-.slideshow img { width: 200px; height: auto; padding: 2px; }
+.slideshow img { width: 200px; height: auto; padding: 0; }
 div.responsive img { width: auto; height: auto }
 .slideshow .name {
     background-color: rgba(0,0,0,0.8);
@@ -120,11 +120,13 @@ div.responsive img { width: auto; height: auto }
     z-index: 0;
     overflow: hidden;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover !important;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain !important;
+    background-position: 8% center !important;
 }
+
 #home-inicio .cycle-slideshow{height: 80vh; max-width: 100%; width: 100%;}
 
 /* 
