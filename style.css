@@ -301,7 +301,7 @@ article.postWrapper:after {
     font-size: 7em;
     font-family: 'BergenSans-SemiBold';
     line-height: 1.1em;
-    right:0;
+    right: 4%;
     position: absolute;
     top: 15%;
     width: 400px;
