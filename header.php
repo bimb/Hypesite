@@ -31,34 +31,35 @@
     <script src='<?php bloginfo('template_url'); ?>/scripts/locale/es.js'></script>
     <script>
 
-     $(document).bind('ready ajaxComplete', function(){
-    $('#calendar').fullCalendar({
-        header: {
-                left: 'title',
-                center: '',
-                right: 'prev,next'
-            },
-        titleFormat: 'MMMM',
-        defaultView: 'basicWeek',
-        googleCalendarApiKey: 'AIzaSyDF0GjrSF2FkVsIgSxU7aPrdrvNM9bvF44',
-        events: {
-                googleCalendarId: 'hcuhmtv6vr4it8g3vsghi5ag1s@group.calendar.google.com'
-            },
-        timeFormat: 'h:mm A',
-        dayOfMonthFormat: 'dddd DD',
-        eventRender: function(event, element) { 
-            element.find('.fc-title').append("<br/><p>" + event.description +"</p>");
-            //element.attr("href", "http://hypetraining.mx/"+ event.location);
-            element.attr("href", "");
-            element.click(function(){
-        
-                $.ajaxSetup({cache:false});
-                var post_url = $(this).attr("href")+"?ajaxload=false";
-                //console.log('URL:'+post_url);
-                $("#single-post-container").hide().load(post_url, function(){$(this).fadeIn();});
-                return false;
-            });
-        },
+    $(document).bind('ready ajaxComplete', function(){
+	    $('#calendar').fullCalendar({
+	    	defaultDate: moment('2017-01-23'),
+	        header: {
+	                left: 'title',
+	                center: '',
+	                right: 'prev,next'
+	            },
+	        titleFormat: 'MMMM',
+	        defaultView: 'basicWeek',
+	        googleCalendarApiKey: 'AIzaSyDF0GjrSF2FkVsIgSxU7aPrdrvNM9bvF44',
+	        events: {
+	                googleCalendarId: 'hcuhmtv6vr4it8g3vsghi5ag1s@group.calendar.google.com'
+	            },
+	        timeFormat: 'h:mm A',
+	        dayOfMonthFormat: 'dddd DD',
+	        eventRender: function(event, element) { 
+	            element.find('.fc-title').append("<br/><p>" + event.description +"</p>");
+	            element.attr("href", "http://hypetraining.mx/"+ event.location);
+	            //element.attr("href", "");
+	            element.click(function(){
+	        
+	                $.ajaxSetup({cache:false});
+	                var post_url = $(this).attr("href")+"?ajaxload=false";
+	                //console.log('URL:'+post_url);
+	                $("#single-post-container").hide().load(post_url, function(){$(this).fadeIn();});
+	                return false;
+	            });
+	        },
         });
     });
     </script>
