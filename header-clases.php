@@ -70,6 +70,9 @@
         <img class="logoBlanco" src="<?php bloginfo('template_url'); ?>/images/logob.png" alt="Hype Logo" />
         </a>
     </div>
+    <?php if(is_user_logged_in()){ ?>
+    <a id="logout" href="<?php echo wp_logout_url( get_bloginfo('url') ); ?>">CERRAR SESIÓN</a>    
+    <?php } ?>
   </section>
     
 </header>

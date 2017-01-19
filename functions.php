@@ -126,5 +126,10 @@ function aldenta_get_images($size = 'thumbnail') {
         return get_children( array('post_parent' => $post->ID, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID') );
 }
 
+function admin_default_page() {
+  return '/mis-reservas';
+}
+
+add_filter('login_redirect', 'admin_default_page');
 
 ?>

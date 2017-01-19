@@ -81,6 +81,11 @@
     </div>
     <!-- Main Logo Here -->
     <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+    <?php if(is_user_logged_in()){ ?>
+    <a id="logout" href="<?php echo wp_logout_url( get_bloginfo('url') ); ?>">CERRAR SESIÓN</a>
+    <?php }else{ ?>
+    <a id="logout" href="<?php bloginfo('url'); ?>/mis-reservas/">INICIA SESIÓN</a>
+    <?php } ?>
     <nav class="pushmenu pushmenu-left">
     <a id="cerrarMenu" class="equis" href=""></a>
     <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>

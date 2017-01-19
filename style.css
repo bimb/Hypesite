@@ -167,6 +167,24 @@ header#navegacion.darkHeader #logo img.logoBlanco{opacity:1;}
     -o-border-radius: 0px;
     border-radius: 0px;
 }
+a#logout {
+    color: #000;
+    font-family: 'AvantGardeITCbyBT-Demi';
+    font-size: 0.75em;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: absolute;
+    right: 3%;
+    top: 25px;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+a#logout:hover{text-decoration: underline;}
+.darkHeader a#logout{color: #FFF;}
 
 
 /**      main content     */
@@ -785,6 +803,10 @@ p.submit input,
 #nm-saving-form-meta {margin: 0 auto;text-align: center;display: block;}
 
     
+/* MIS RESERVAS */
+#post-28 h2{border-bottom: 1px solid #CCC; margin: 100px 100px 50px 100px;}
+.bookly-customer-appointment-list .ab-appointments-table{margin:0 auto;}
+.bookly-customer-appointment-list h2{display: none;}
 
 /* CONTACTO */
 section#home-contacto, section#home-footer{min-height: auto;}
@@ -914,6 +936,7 @@ section#home-footer ul li{ display: inline-block; float: none; }
 @media only screen and (max-width: 900px) {
     #menu-main-menu,  
     #post-inicio,
+    a#logout,
     #post-acerca-de .thumbnail, 
     #post-acerca-de section.postText, 
     img.colorShapesEntrenamiento, 
