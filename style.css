@@ -332,6 +332,20 @@ article.postWrapper:after {
   width: 45px; 
 }
 
+#home-inicio #post-inicio-mobile .rightImage {
+  background-image: url('images/colorShapesEntrenamiento.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 5%;
+  top: 33%;
+  height: 22%;
+  width: 21%;
+  z-index: 999;
+}
+#post-inicio-mobile{display: none;}
+
 /* ACERCA DE */
 
 section.section-home#home-acerca-de {min-height: 550px;}
@@ -898,9 +912,23 @@ section#home-footer ul li{ display: inline-block; float: none; }
 /* RESPONSIVE */
 
 @media only screen and (max-width: 900px) {
-    #menu-main-menu, #home-inicio ul, #home-inicio .downArrow, #post-acerca-de .thumbnail, #post-acerca-de section.postText, img.colorShapesEntrenamiento, #entrenamientoBloques, #home-yoga section.postText, img.colorShapesBottomDos, #home-yoga .imageHero{display: none;}
-    section.section-home#home-acerca-de, section.section-home {min-height: initial;}
-    #post-acerca-de section.post, #home-entrenamiento section.post, #home-yoga section.post {
+    #menu-main-menu,  
+    #post-inicio,
+    #post-acerca-de .thumbnail, 
+    #post-acerca-de section.postText, 
+    img.colorShapesEntrenamiento, 
+    #entrenamientoBloques, 
+    #home-yoga section.postText, 
+    img.colorShapesBottomDos, 
+    #home-yoga .imageHero{display: none;}
+
+    #post-inicio-mobile{display: block;}
+    section.section-home#home-acerca-de, 
+    section.section-home {min-height: initial;}
+
+    #post-acerca-de section.post, 
+    #home-entrenamiento section.post, 
+    #home-yoga section.post {
     float:left;
     text-align:left;
     min-width: 100%;

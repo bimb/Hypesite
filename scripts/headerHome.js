@@ -1,7 +1,7 @@
-
 $(document).ready(function(){
     
-    var myURL = window.location.protocol + "//" + window.location.host + "/tests/hype/";
+    var myURL = window.location.protocol + "//" + window.location.host +"/";
+    //var myURL = window.location.protocol + "//" + window.location.host + "/tests/hype/"; /* TESTING */
    
     var post_url0 = myURL+"inicio/?ajaxload=true";
     var post_url1 = myURL+"acerca-de/?ajaxload=false";
@@ -35,6 +35,7 @@ $(document).ready(function(){
     
     function arrowSlide(){
         $('.cycle-slideshow').cycle();
+        $('.cycle-slideshow-mobile').cycle();
         $("#home-inicio .downArrow").click(function() {
         $("html, body").animate({ scrollTop: $('#home-acerca-de').offset().top }, 1000);
         });
