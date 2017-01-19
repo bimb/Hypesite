@@ -48,10 +48,10 @@ if($ajaxload == false)
     <p>Por favor regístrate o inicia sesión para continuar</p>
     <ul id="clasesLogReg">
       <li class="clasesSelected">Login</li>
-      <li>Registro</li>
+      <li><a href="<?php bloginfo('url'); ?>/registro/">Registro</a></li>
     </ul>
     <div id="clasesLogin"><?php echo do_shortcode( '[nm-wp-login]' ); ?></div>
-    <div id="clasesRegister" style="display: none;"><?php echo do_shortcode( '[nm-wp-registration]' ); ?></div>
+    <!--div id="clasesRegister" style="display: none;"><?php echo do_shortcode( '[nm-wp-registration]' ); ?></div-->
   </article>
   <script type="text/javascript">
 

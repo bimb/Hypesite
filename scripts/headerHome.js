@@ -37,7 +37,10 @@ $(document).ready(function(){
         $('.cycle-slideshow').cycle();
         $('.cycle-slideshow-mobile').cycle();
         $("#home-inicio .downArrow").click(function() {
-        $("html, body").animate({ scrollTop: $('#home-acerca-de').offset().top }, 1000);
+            $("html, body").animate({ scrollTop: $('#home-acerca-de').offset().top }, 1000);
+        });
+        $(".rightReservar").click(function() {
+            $("html, body").animate({ scrollTop: $('#home-horarios').offset().top }, 1000);
         });
     }
 

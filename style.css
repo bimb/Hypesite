@@ -314,6 +314,18 @@ article.postWrapper:after {
   width: 14%;
   z-index: 999;
 }
+.rightReservar {
+    background-image: url(images/btnReservar.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    position: absolute;
+    right: 20%;
+    bottom: 10%;
+    height: 22%;
+    width: 15%;
+    z-index: 999;
+}
 #post-acerca-de p {margin: 5px 0px 0px 0px;}
 #home-inicio .postText {
     font-size: 7em;
@@ -773,12 +785,13 @@ span.fc-title p {
 }
 
 ul#clasesLogReg{cursor: pointer; margin: 0; padding: 0; list-style: none; text-transform: uppercase;}
-ul#clasesLogReg li {
+ul#clasesLogReg li, ul#clasesLogReg li a {
     display: inline-block;
     margin: 0px 15px;
     padding: 5px;
+    text-decoration: none;
 }
-.clasesSelected{background-color: #000; color: #fff}
+ul#clasesLogReg li a:hover, .clasesSelected{background-color: #000; color: #fff}
 
 #wp-registration-box p, 
 .nm-terms-condition,
@@ -802,6 +815,7 @@ p.submit input,
 }
 #nm-saving-form-meta {margin: 0 auto;text-align: center;display: block;}
 
+#nm-wp-registration-form h2{border-top: 3px solid #000; text-align: center;text-transform: uppercase;}
     
 /* MIS RESERVAS */
 #post-28 h2{border-bottom: 1px solid #CCC; margin: 100px 100px 50px 100px;}
@@ -948,6 +962,13 @@ section#home-footer ul li{ display: inline-block; float: none; }
     #post-inicio-mobile{display: block;}
     section.section-home#home-acerca-de, 
     section.section-home {min-height: initial;}
+
+    .rightReservar{
+      right: 5%;
+      bottom: 3%;
+      height: 22%;
+      width: 35%;
+    }
 
     #post-acerca-de section.post, 
     #home-entrenamiento section.post, 

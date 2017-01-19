@@ -131,5 +131,6 @@ function admin_default_page() {
 }
 
 add_filter('login_redirect', 'admin_default_page');
+add_filter('show_admin_bar', '__return_false');
 
 ?>

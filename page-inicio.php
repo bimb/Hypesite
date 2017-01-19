@@ -41,6 +41,7 @@ if($ajaxload == false)
               ?>
             </section>
             <div class="leftImage"></div>
+            <div class="rightReservar"></div>
             <ul>
               <li>chihuahua 78<br>roma norte</li>
               <li>hypetraining.mx<br>@hypetrainingmx</li>
@@ -80,6 +81,7 @@ if($ajaxload == false)
               </section>
               <div class="leftImage"></div>
               <div class="rightImage"></div>
+              <div class="rightReservar"></div>
               <div class="redesSociales">
                 <a href="https://facebook.com/hypetrainingmx" target="_blank">
                 <img src="<?php bloginfo('url'); ?>/wp-content/uploads/2016/12/facebook.png" alt="" class="facebook">
