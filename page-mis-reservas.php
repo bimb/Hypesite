@@ -25,10 +25,11 @@ if($ajaxload == false)
     <?php }else{ ?>
 
     <article class="postWrapper" id="post-clases">
-      <h2>Login</h2>
-      <p>Por favor inicia sesión para ver tus reservas</p>
+      <h2>Login / Registro</h2>
+      <p>Por favor inicia sesión para ver tus reservas o regístrate si no lo has hecho aún.</p>
       <ul id="clasesLogReg">
         <li class="clasesSelected">Login</li>
+        <li><a href="<?php bloginfo('url'); ?>/registro/">Registro</a></li>
       </ul>
       <div id="clasesLogin"><?php echo do_shortcode( '[nm-wp-login]' ); ?></div>
     </article>

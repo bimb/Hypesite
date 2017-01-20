@@ -84,7 +84,7 @@
     <?php if(is_user_logged_in()){ ?>
     <a id="logout" href="<?php echo wp_logout_url( get_bloginfo('url') ); ?>">CERRAR SESIÓN</a>
     <?php }else{ ?>
-    <a id="logout" href="<?php bloginfo('url'); ?>/mis-reservas/">INICIA SESIÓN</a>
+    <a id="logout" href="<?php bloginfo('url'); ?>/mis-reservas/">INICIA SESIÓN / REGISTRO</a>
     <?php } ?>
     <nav class="pushmenu pushmenu-left">
     <a id="cerrarMenu" class="equis" href=""></a>
