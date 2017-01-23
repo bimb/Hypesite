@@ -48,7 +48,17 @@
         dayOfMonthFormat: 'dddd DD',
         eventRender: function(event, element) { 
             element.find('.fc-title').append("<br/><p>" + event.description +"</p>");
-            element.attr("href", "http://frutabomba.com.mx/tests/hype/"+ event.location);
+            element.attr("href", "http://hypetraining.mx/"+ event.location);
+            //element.attr("href", "http://frutabomba.com.mx/tests/hype/"+ event.location);
+            //element.attr("href", "");
+            element.click(function(){
+        
+                $.ajaxSetup({cache:false});
+                var post_url = $(this).attr("href")+"?ajaxload=false";
+                //console.log('URL:'+post_url);
+                $("#single-post-container").hide().load(post_url, function(){$(this).fadeIn();});
+                return false;
+            });
         },
         });
     });
@@ -71,7 +81,7 @@
         </a>
     </div>
     <?php if(is_user_logged_in()){ ?>
-    <a id="logout" href="<?php echo wp_logout_url( get_bloginfo('url') ); ?>">CERRAR SESIÓN</a>    
+    <a id="logout" href="<?php echo wp_logout_url( get_bloginfo('url') ); ?>">CERRAR SESIÓN</a>     
     <?php } ?>
   </section>
     

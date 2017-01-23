@@ -50,6 +50,7 @@
 	        eventRender: function(event, element) { 
 	            element.find('.fc-title').append("<br/><p>" + event.description +"</p>");
 	            element.attr("href", "http://hypetraining.mx/"+ event.location);
+                //element.attr("href", "http://frutabomba.com.mx/tests/hype/"+ event.location);
 	            //element.attr("href", "");
 	            element.click(function(){
 	        
@@ -83,6 +84,7 @@
     <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
     <?php if(is_user_logged_in()){ ?>
     <a id="logout" href="<?php echo wp_logout_url( get_bloginfo('url') ); ?>">CERRAR SESIÓN</a>
+    <a id="logoutReservas" href="<?php echo get_bloginfo('url'); ?>/mis-reservas"  target="_blank"> / MIS RESERVAS</a>   
     <?php }else{ ?>
     <a id="logout" href="<?php bloginfo('url'); ?>/mis-reservas/">INICIA SESIÓN / REGISTRO</a>
     <?php } ?>

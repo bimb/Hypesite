@@ -15,7 +15,7 @@ if($ajaxload == false)
   if (have_posts()) : while (have_posts()) : the_post();
   ?>
 
-	<article class="postWrapper" id="post-<?php the_ID(); ?>">
+	<article class="postWrapper" id="post-mis-reservas">
 
   <?php   if(is_user_logged_in()){ ?>
                 
@@ -40,12 +40,20 @@ if($ajaxload == false)
     </article>
 
   <?php
+  endwhile; 
+  endif;
 
-  endwhile; else: ?>
+  $query = new WP_Query( array( 'pagename' => 'horarios' ) );
 
-    <p>Sorry, no pages matched your criteria.</p>
-
-<?php
+  if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+   <?php   if(is_user_logged_in()){ ?>
+    <div id="single-post-container"></div>
+    <article class="postWrapper" id="post-horarios">
+      <section class="post"><?php the_content(__('(more...)')); ?></section>
+    </article>
+   <?php } ?>
+  <?php
+  endwhile; 
   endif;
 
   if($ajaxload == false)get_footer(); 
