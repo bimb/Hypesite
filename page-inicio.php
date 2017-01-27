@@ -45,7 +45,7 @@ if($ajaxload == false)
             <ul>
               <li>chihuahua 78<br>roma norte</li>
               <li>hypetraining.mx<br>@hypetrainingmx</li>
-              <li>yoga, running, pilates,<br>funcitonal,trx</li>
+              <li>yoga, running, pilates,<br>functional,trx</li>
             </ul>
             <div class="downArrow"></div>
             
@@ -89,9 +89,9 @@ if($ajaxload == false)
                 <a href="https://instagram.com/hypetrainingmx" target="_blank">
                 <img src="<?php bloginfo('url'); ?>/wp-content/uploads/2016/12/instagram.png" alt="" class="instagram">
                 </a>
-                <a href="https://twitter.com/hypetrainingmx" target="_blank">
+                <!--a href="https://twitter.com/hypetrainingmx" target="_blank">
                 <img src="<?php bloginfo('url'); ?>/wp-content/uploads/2016/12/twitter.png" alt="" class="twitter">
-                </a>
+                </a-->
               </div>
               <?php
               endwhile; 

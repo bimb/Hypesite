@@ -418,9 +418,10 @@ section.section-home#home-acerca-de {min-height: 550px;}
     bottom: 15%;
     font-size: 5em;
     font-family: 'BergenSans-SemiBold';
-    right: 25%;
+    right: 35%;
     line-height: 0.9em;
     position: absolute;
+    text-align: right;;
     width: 400px;
     z-index: 10;
 }
@@ -835,6 +836,122 @@ button.ab-btn.ab--show-past.ab-inline-block.ab-right {display: none !important;}
 
 #post-horarios{background-color: #000; color: #fff;padding: 65px;}
 
+/* PAQUETES */
+article#post-paquetes {
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    padding-bottom: 200px;
+}
+article#post-paquetes .post {margin-top: 50px;}
+article#post-paquetes .post h2 {
+    font-size: 7em;
+    margin-left: 73px;
+    margin-top: -30px;
+}
+article#post-paquetes .post h2::after {
+    content: '';
+    border-top: 1px solid #fff;
+    width: 90%;
+    display: block;
+    height: 1px;
+    margin-bottom: -15px;
+}
+article#post-paquetes .post h4 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-left: 73px;
+    font-family: 'BergenSans-SemiBold';
+
+}
+article#post-paquetes .post h4::before {
+    content: '';
+    border-top: 3px solid #fff;
+    width: 115px;
+    display: block;
+    height: 1px;
+    margin-bottom: 0px;
+}
+section.postPaquetePrecios {
+    font-size: 2em;
+    font-weight: bold;
+    
+    display: inline-block;
+    width: auto;
+    margin-top: 125px;
+    margin-left: 205px;
+}
+section.postPaquetePagar {
+    font-weight: bold;
+    
+    display: inline-block;
+    width: auto;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 100px;
+    float: right;
+    text-align: center;
+}
+section.postPaquetePagar ul {
+    display: inline-block;
+    list-style: none;
+}
+section.postPaquetePagar ul li {
+    width: 250px;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+}
+section.postPaquetePagar ul li input,
+section.postPaquetePagar ul li img{
+  cursor: pointer;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+section.postPaquetePagar ul li input:hover,
+section.postPaquetePagar ul li img:hover{
+  background-color: #000;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+article#post-paquetes .leftImage {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 63px;
+    bottom: 25px;
+    height: 100px;
+    width: 150px;
+    z-index: 999;
+    background-image: url('images/colorShapesLeft.png');
+    transform: rotate(-90deg);
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+
+article#post-paquetes .rightImage {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    right: 0;
+    top: 250px;
+    height: 100px;
+    width: 150px;
+    z-index: 999;
+    background-image: url(images/colorShapesLeft.png);
+    transform: rotate(-180deg);
+    overflow: hidden;
+}
+.paqueteMsg {
+    margin: 0 auto;
+    float: none;
+    max-width: 420px;
+    width: 100%;
+}
 
 /* CONTACTO */
 section#home-contacto, section#home-footer{min-height: auto;}

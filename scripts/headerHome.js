@@ -11,6 +11,7 @@ $(document).ready(function(){
     var post_url5 = myURL+"entrenamiento/?ajaxload=false";
     var post_url6 = myURL+"yoga/?ajaxload=false";
     var post_url7 = myURL+"category/instructores/?ajaxload=false";
+    var post_url8 = myURL+"paquetes/?ajaxload=false";
 
     
     
@@ -25,6 +26,7 @@ $(document).ready(function(){
     $("#home-entrenamiento").load(post_url5);
     $("#home-yoga").load(post_url6);
     $("#home-instructores").load(post_url7, ajaxLoadInstructores);
+    $("#home-paquetes").load(post_url8);
     
     
     $("ul#menu-main-menu li a, .pushmenu ul.menu li a").removeAttr("href");
