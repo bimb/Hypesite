@@ -986,23 +986,20 @@ section#home-footer {background-color: #000; color: #fff; text-align: center;}
 section#home-footer ul{ display: inline-block; list-style: none; margin: 0; padding: 10px 0; width: 100%;}
 section#home-footer ul li{ display: inline-block; float: none; }
 
-@media only screen and (max-width : 729px) {
-
-}
 
 
 /* MENU MOBILE */
 
 .pushmenu { /*this is the nav*/
     background: #000;
-	font-family: 'BergenSans-SemiBold';
-	width: 100%;
-	height: 100%;
-	top: 0;
-	z-index: 1000;
-	position: fixed;
-	padding: 100px 0px;
-	box-sizing: border-box;}
+  font-family: 'BergenSans-SemiBold';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+  position: fixed;
+  padding: 100px 0px;
+  box-sizing: border-box;}
 
 .pushmenu ul{margin: 0; padding: 0; margin-top: 30px;}
 
@@ -1062,7 +1059,12 @@ section#home-footer ul li{ display: inline-block; float: none; }
   width: 33px;
   text-indent: -99999em;
   float: right;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; 
 }
+.darkHeader #nav_list{-webkit-filter: invert(100%);filter: invert(100%);}
 
 .nav-list.active {
   background-position: -33px top;
@@ -1075,6 +1077,21 @@ section#home-footer ul li{ display: inline-block; float: none; }
     right: 0px;
     top: 0px;
     display: none;}
+
+
+
+#post-horarios{padding: 25px;}
+
+
+
+@media only screen and (max-width : 729px) {
+  article#post-paquetes .post h4,
+  article#post-paquetes .post h2{margin-left: 30px;}
+  article#post-paquetes .post h2 {font-size: 4em;}
+  section.postPaquetePrecios {font-size: 1.2em;margin-left: 25px;}
+  section.postPaquetePagar {margin: 0 auto 0 auto;}
+}
+
 
 /* RESPONSIVE */
 
