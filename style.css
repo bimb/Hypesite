@@ -796,6 +796,7 @@ ul#clasesLogReg li, ul#clasesLogReg li a {
 ul#clasesLogReg li a:hover, .clasesSelected{background-color: #000; color: #fff}
 
 #wp-registration-box p, 
+#nm-wpregistration-box p,
 .nm-terms-condition,
 .wpregistration-save-button {
     clear: both;
@@ -805,8 +806,10 @@ ul#clasesLogReg li a:hover, .clasesSelected{background-color: #000; color: #fff}
     text-align: center;
 }
 #wp-registration-box p input, 
+#nm-wpregistration-box p input, 
 #loginform input{border: 2px solid #000;font-family: 'DINPro-Regular';}
-#wp-registration-box p input{width: 35% !important;}
+/*#wp-registration-box p input,
+#nm-wpregistration-box p input{width: 35% !important;}*/
 p.submit input,
 .wpregistration-save-button input {
     border: 2px solid #000;
@@ -828,6 +831,18 @@ p.submit input:hover,
   padding: 5px 10px;
 }
 
+#nm-wpregistration-box label.meta-data-label{font-weight: normal !important;}
+
+.col-1-6, .col-2-12 {
+    width: 70% !important;
+    float: none !important;
+    text-align: center;
+    margin: 0 auto;
+}
+.col-1-2 {float: none !important;margin: 0 auto;}
+.fb-login-wrapper{background:transparent !important;}
+
+
 /* MIS RESERVAS */
 #post-mis-reservas h2{margin: 100px 100px 50px 100px;}
 .bookly-customer-appointment-list .ab-appointments-table{margin:0 auto;}
@@ -835,6 +850,19 @@ p.submit input:hover,
 button.ab-btn.ab--show-past.ab-inline-block.ab-right {display: none !important;}/* temporary delete hostory */
 
 #post-horarios{background-color: #000; color: #fff;padding: 65px;}
+
+#post-mis-reservas #post-clases{position: relative; height: 100vh;overflow: scroll;}
+
+.nm-wp-login .input {max-width: 240px;}
+
+#clasesLogin h2 {display: none;}
+
+section.post.registroNoFB{ 
+  max-width: 500px; 
+  margin:50px auto; 
+  float: none;
+  text-align: center;
+}
 
 /* PAQUETES */
 article#post-paquetes {
@@ -897,26 +925,36 @@ section.postPaquetePagar ul {
     list-style: none;
 }
 section.postPaquetePagar ul li {
-    width: 250px;
-    height: auto;
     display: inline-block;
-    text-align: center;
+    height: auto;
     margin: 5px;
+    position: relative;
+    text-align: center;
+    width: 250px;
 }
 section.postPaquetePagar ul li input,
-section.postPaquetePagar ul li img{
+section.postPaquetePagar ul li img,
+section.postPaquetePagar ul li input{
   cursor: pointer;
-  -webkit-transition: all .4s ease-in-out;
-  -moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
+input.paqueteOn, input.paqueteOff {width: 90%;}
+section.postPaquetePagar ul li img.paqueteOff,
+section.postPaquetePagar ul li input.paqueteOff{left: 10px; opacity: 0; position: absolute; top: 0;}
+section.postPaquetePagar ul li:hover > a img.paqueteOn,
+section.postPaquetePagar ul li:hover > form input.paqueteOn {opacity: 0;}
+section.postPaquetePagar ul li:hover > a img.paqueteOff,
+section.postPaquetePagar ul li:hover > form input.paqueteOff {opacity: 1;}
+/*
 section.postPaquetePagar ul li input:hover,
 section.postPaquetePagar ul li img:hover{
   background-color: #000;
   -webkit-filter: invert(100%);
   filter: invert(100%);
-}
+}*/
 
 article#post-paquetes .leftImage {
     background-repeat: no-repeat;

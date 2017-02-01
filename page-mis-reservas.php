@@ -20,7 +20,15 @@ if($ajaxload == false)
 
 	<article class="postWrapper" id="post-mis-reservas">
 
-  <?php   if(is_user_logged_in()){ ?>
+  <?php   if(is_user_logged_in()){ 
+
+          $current_user = wp_get_current_user();
+          $email = $current_user->user_email;
+          $user_name = $current_user->user_firstname.' '.$current_user->user_lastname;
+
+          if($email){
+
+  ?>
                 
       
 		<section class="post"><?php the_content(__('(more...)')); ?></section>
@@ -37,20 +45,18 @@ if($ajaxload == false)
             $paqueteNum = "20 clases 60 días";
             break;
           case 3:
-            $paqueteNum = "30 clases 70 días";
+            $paqueteNum = "30 clases 90 días";
             break;
         }
         /* MAILER */
-        $current_user = wp_get_current_user();
-
+        
         /*
          echo 'Username: ' . $current_user->user_login . '<br />';
          echo 'User email: ' . $current_user->user_email . '<br />';
          echo 'User first name: ' . $current_user->user_firstname . '<br />';
          echo 'User last name: ' . $current_user->user_lastname . '<br />';
         */
-         $email = $current_user->user_email;
-         $user_name = $current_user->user_firstname.' '.$current_user->user_lastname;
+         
 
 
         echo "
@@ -77,7 +83,7 @@ if($ajaxload == false)
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-        $subject= 'Hype Training - Recibo de pago de paquete '.$paqueteNum.' TEST';
+        $subject= 'Hype Training - Recibo de pago de paquete '.$paqueteNum.' ';
         $sub = '=?UTF-8?B?'.base64_encode($subject).'?=';
 
         $message = "
@@ -103,7 +109,21 @@ if($ajaxload == false)
       ?>
     </section>
 		
-    <?php }else{ ?>
+    
+    <?php 
+
+    }else{
+      $registroURL = get_bloginfo('url').'/registro/';
+      echo '<section class="post registroNoFB">
+              <h2>Registro</h2>
+              Los sentimos, ocurrió un error al registrarte con Facebook.<br>
+              Favor de registrarte: a través del formulario <a href="'.wp_logout_url($registroURL).'">aquí</a><br>';
+      echo  '</section>';
+            
+    }
+    //user logged in
+    }else{ 
+      ?>
 
     <article class="postWrapper" id="post-clases">
       <h2>Login / Registro</h2>
@@ -127,7 +147,7 @@ if($ajaxload == false)
   $query2 = new WP_Query( array( 'pagename' => 'paquetes' ) );
 
   if ( $query2->have_posts() ) : while ( $query2->have_posts() ) : $query2->the_post(); ?>
-   <?php   if(is_user_logged_in()){ ?>
+   <?php   if(is_user_logged_in() && $email){ ?>
     <article class="postWrapper" id="post-paquetes">
      <section class="post"><?php the_content(__('(more...)')); ?></section>
      <section class="postPaquetePrecios"> 
@@ -144,7 +164,8 @@ if($ajaxload == false)
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="2H3W5NPWB9PFG">
-            <input type="image" src="http://hypetraining.mx/wp-content/themes/Hypesite/images/paquete01-a.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+            <input type="image" class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/10_1.png" border="0" name="submit" >
+            <input type="image" class="paqueteOff" src="<?php bloginfo('template_url'); ?>/images/10.png" border="0" name="submit" >
             <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
             </form>
           </li>
@@ -152,7 +173,8 @@ if($ajaxload == false)
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="FDYBP3DNN6GZW">
-            <input type="image" src="http://hypetraining.mx/wp-content/themes/Hypesite/images/paquete02-a.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+            <input type="image" class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/20_1.png" border="0" name="submit" >
+            <input type="image" class="paqueteOff" src="<?php bloginfo('template_url'); ?>/images/20.png" border="0" name="submit" >
             <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
             </form>
           </li>
@@ -160,7 +182,8 @@ if($ajaxload == false)
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="KEVANL446C6SJ">
-            <input type="image" src="http://hypetraining.mx/wp-content/themes/Hypesite/images/paquete03-a.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+            <input type="image" class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/30_1.png" border="0" name="submit" >
+            <input type="image" class="paqueteOff" src="<?php bloginfo('template_url'); ?>/images/30.png" border="0" name="submit" >
             <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
             </form>
           </li>
@@ -169,17 +192,20 @@ if($ajaxload == false)
         <ul>
           <li>
             <a href="<?php bloginfo('url'); ?>/mis-reservas">
-            <img class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/paquete01-a.png" />
+            <img class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/10_1.png" />
+            <img class="paqueteOff" src="<?php bloginfo('template_url'); ?>/images/10.png" />
             </a>
           </li>
           <li>
             <a href="<?php bloginfo('url'); ?>/mis-reservas">
-            <img class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/paquete02-a.png" />
+            <img class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/20_1.png" />
+            <img class="paqueteOff" src="<?php bloginfo('template_url'); ?>/images/20.png" />
             </a>
           </li>
           <li>
             <a href="<?php bloginfo('url'); ?>/mis-reservas">
-            <img class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/paquete03-a.png" />
+            <img class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/30_1.png" />
+            <img class="paqueteOff" src="<?php bloginfo('template_url'); ?>/images/30.png" />
             </a>
           </li>
         </ul>
@@ -194,6 +220,7 @@ if($ajaxload == false)
   endwhile; 
   endif;
 
+  if($email){
   $query = new WP_Query( array( 'pagename' => 'horarios' ) );
 
   if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -206,6 +233,7 @@ if($ajaxload == false)
   <?php
   endwhile; 
   endif;
+  }//if email
 
   if($ajaxload == false)get_footer(); 
 ?>

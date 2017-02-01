@@ -31,7 +31,8 @@ if($ajaxload == false)
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
           <input type="hidden" name="cmd" value="_s-xclick">
           <input type="hidden" name="hosted_button_id" value="2H3W5NPWB9PFG">
-          <input type="image" src="http://hypetraining.mx/wp-content/themes/Hypesite/images/paquete01-a.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+          <input type="image" class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/10_1.png" border="0" name="submit" >
+          <input type="image" class="paqueteOff" src="<?php bloginfo('template_url'); ?>/images/10.png" border="0" name="submit" >
           <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
           </form>
         </li>
@@ -39,7 +40,8 @@ if($ajaxload == false)
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
           <input type="hidden" name="cmd" value="_s-xclick">
           <input type="hidden" name="hosted_button_id" value="FDYBP3DNN6GZW">
-          <input type="image" src="http://hypetraining.mx/wp-content/themes/Hypesite/images/paquete02-a.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+          <input type="image" class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/20_1.png" border="0" name="submit" >
+          <input type="image" class="paqueteOff" src="<?php bloginfo('template_url'); ?>/images/20.png" border="0" name="submit" >
           <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
           </form>
         </li>
@@ -47,7 +49,8 @@ if($ajaxload == false)
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
           <input type="hidden" name="cmd" value="_s-xclick">
           <input type="hidden" name="hosted_button_id" value="KEVANL446C6SJ">
-          <input type="image" src="http://hypetraining.mx/wp-content/themes/Hypesite/images/paquete03-a.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+          <input type="image" class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/30_1.png" border="0" name="submit" >
+          <input type="image" class="paqueteOff" src="<?php bloginfo('template_url'); ?>/images/30.png" border="0" name="submit" >
           <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
           </form>
         </li>
@@ -56,17 +59,20 @@ if($ajaxload == false)
       <ul>
         <li>
           <a href="<?php bloginfo('url'); ?>/mis-reservas">
-          <img class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/paquete01-a.png" />
+          <img class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/10_1.png" />
+          <img class="paqueteOff" src="<?php bloginfo('template_url'); ?>/images/10.png" />
           </a>
         </li>
         <li>
           <a href="<?php bloginfo('url'); ?>/mis-reservas">
-          <img class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/paquete02-a.png" />
+          <img class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/20_1.png" />
+          <img class="paqueteOff" src="<?php bloginfo('template_url'); ?>/images/20.png" />
           </a>
         </li>
         <li>
           <a href="<?php bloginfo('url'); ?>/mis-reservas">
-          <img class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/paquete03-a.png" />
+          <img class="paqueteOn" src="<?php bloginfo('template_url'); ?>/images/30_1.png" />
+          <img class="paqueteOff" src="<?php bloginfo('template_url'); ?>/images/30.png" />
           </a>
         </li>
       </ul>

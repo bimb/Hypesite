@@ -22,7 +22,7 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
     <script src="<?php bloginfo('template_url'); ?>/scripts/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/headerHome.js"></script>
+    <!--script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/headerHome.js"></script-->
     <script src="<?php bloginfo('template_url'); ?>/scripts/jquery.cycle2.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/scripts/jquery.cycle2.carousel.min.js"></script>
     <script src='<?php bloginfo('template_url'); ?>/scripts/moment.min.js'></script>
@@ -48,14 +48,10 @@
         dayOfMonthFormat: 'dddd DD',
         eventRender: function(event, element) { 
             element.find('.fc-title').append("<br/><p>" + event.description +"</p>");
-            element.attr("href", "http://hypetraining.mx/"+ event.location);
-            //element.attr("href", "http://frutabomba.com.mx/tests/hype/"+ event.location);
-            //element.attr("href", "");
+            element.attr("href", "<?php echo get_bloginfo('url'); ?>/"+ event.location);
             element.click(function(){
-        
                 $.ajaxSetup({cache:false});
                 var post_url = $(this).attr("href")+"?ajaxload=false";
-                //console.log('URL:'+post_url);
                 $("#single-post-container").hide().load(post_url, function(){$(this).fadeIn();});
                 return false;
             });

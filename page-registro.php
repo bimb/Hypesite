@@ -25,7 +25,7 @@ if($ajaxload == false)
             <br>
             
             <div id="clasesRegister">
-              <?php echo do_shortcode( '[nm-wp-registration]' ); ?>
+              <?php echo do_shortcode( '[nm-wp-registration login="no"]' ); ?>
             </div>
             <?php } ?>
 		
